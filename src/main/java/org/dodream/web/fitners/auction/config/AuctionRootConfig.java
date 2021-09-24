@@ -9,4 +9,5 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "org.dodream.web.fitners.auction.service")
 public class AuctionRootConfig {
 
+
 }
