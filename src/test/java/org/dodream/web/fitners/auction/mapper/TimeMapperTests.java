@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ContextConfiguration(classes = {RootConfig.class})
 public class TimeMapperTests {
 
-    @Autowired(required)
+    @Autowired(required = false)
     TimeMapper timeMapper;
 
     @Test
