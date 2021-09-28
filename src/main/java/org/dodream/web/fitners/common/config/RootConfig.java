@@ -4,16 +4,20 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.dodream.web.fitners.auction.config.AuctionRootConfig;
+import org.dodream.web.fitners.fboard.config.FboardRootConfig;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.TransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import javax.sql.DataSource;
 
 @Configuration
-@Import(AuctionRootConfig.class)
+@Import({AuctionRootConfig.class, FboardRootConfig.class})
+@EnableTransactionManagement
 public class RootConfig {
 
     @Bean

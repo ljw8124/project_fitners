@@ -11,10 +11,10 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @Log4j2
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {RootConfig.class})
+@ContextConfiguration(classes = {AuctionRootConfig.class, RootConfig.class})
 public class TimeMapperTests {
 
-    @Autowired(required = false)
+    @Autowired
     TimeMapper timeMapper;
 
     @Test
