@@ -10,4 +10,8 @@ public interface FreplyMapper {
 
     List<Freply> getReplyList(Long bno);
 
+    int delete(Long rno);
+
+    int update(Freply reply);
+
 }

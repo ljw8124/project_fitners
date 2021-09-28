@@ -29,4 +29,29 @@ public class FreplyController {
         log.warn("============getReplyList================");
         return freplyService.getReplyList(bno);
     }
+
+    @DeleteMapping("/{rno}")
+    public String remove(@PathVariable(name = "rno") Long rno) {
+        log.info("remove reply............");
+
+        log.info("rno: " + rno);
+
+        freplyService.remove(rno);
+
+        return "success";
+    }
+
+    @PutMapping("/{rno}")
+    public String modify(@PathVariable(name = "rno") Long rno,
+                         @RequestBody FreplyDTO FreplyDTO) {
+        log.info("modify reply................");
+
+        log.info("rno : " + rno);
+        log.info("replyDTO : " + FreplyDTO);
+        log.info("=====================================");
+
+        freplyService.modify(FreplyDTO);
+
+        return "success";
+    }
 }

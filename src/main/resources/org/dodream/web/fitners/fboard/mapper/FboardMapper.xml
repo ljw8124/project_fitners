@@ -12,8 +12,27 @@
         </selectKey>
     </insert>
 
+    <sql id="search">
+        <if test="type != null">
+            <foreach collection="arr" item="item" separator=" OR " open="WHERE (" close=")">
+                <if test="item == 'T'.toString()">
+                    title like concat('%', #{keyword}, '%')
+                </if>
+                <if test="item == 'C'.toString()">
+                    content like concat('%', #{keyword}, '%')
+                </if>
+                <if test="item == 'W'.toString()">
+                    writer like concat('%', #{keyword}, '%')
+                </if>
+            </foreach>
+        </if>
+    </sql>
+
     <select id="getFboardList" resultType="org.dodream.web.fitners.fboard.domain.Fboard">
         select * from tbl_fboard
+
+        <include refid="search"></include>
+
         order by bno desc limit #{skip},#{size}
     </select>
 

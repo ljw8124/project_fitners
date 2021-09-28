@@ -11,7 +11,9 @@ public interface FreplyService {
 
     List<FreplyDTO> getReplyList(Long bno);
 
+    int remove(Long rno);
 
+    int modify(FreplyDTO fReplyDTO);
 
     default Freply dtoToEntity(FreplyDTO freplyDTO) {
         Freply feply = Freply.builder()

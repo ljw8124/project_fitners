@@ -29,4 +29,15 @@ public class FreplyServiceImpl implements FreplyService{
 
         return freplyList;
     }
+
+    @Override
+    public int remove(Long rno) {
+        return freplyMapper.delete(rno);
+    }
+
+    @Override
+    public int modify(FreplyDTO fReplyDTO) {
+        return freplyMapper.update(dtoToEntity(fReplyDTO));
+    }
+
 }
