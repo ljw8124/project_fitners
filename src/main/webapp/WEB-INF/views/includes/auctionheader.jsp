@@ -35,7 +35,6 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/resources/dist/css/adminlte.min.css">
 
-
 </head>
 <style>
     * {
@@ -55,6 +54,16 @@
         color: #fff;
         background: #fdc10c;
         padding: 10px 20px;
+    }
+    .ondesk{
+        color: whitesmoke;
+        margin: 3px;
+        text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+    }
+
+    .onbottom{
+        color: white;
+        text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
     }
     .bidlist{
         float: right;
@@ -122,7 +131,7 @@
                 <!--              </div>-->
                 <!--            </li>-->
                 <li class="nav-item"><a href="/about.jsp" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Matching</a></li>
+                <li class="nav-item"><a href="/auction.jsp" class="nav-link">Matching</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Self Management</a></li>
                 <li class="nav-item"><a href="/fboard/list" class="nav-link">FreeBoard</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Login</a></li>
@@ -133,12 +142,12 @@
 </nav>
 <!-- END nav -->
 
-<div class="hero-wrap hero-bread" style="background-image: url('/resources/images/bg456.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('/resources/images/mainphoto.jpg');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <h1 class="mb-0 bread">FITNERS</h1>
-                <h3 class="breadcrumbs"><span>Auction</span></h3>
+                <h1 class="mb-0 bread ondesk">FITNERS</h1>
+                <h3 class="breadcrumbs"><span class="onbottom">Auction</span></h3>
             </div>
         </div>
     </div>
