@@ -19,6 +19,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @Import({AuctionServletConfig.class, FboardServletConfig.class})
 @ComponentScan(basePackages = {"org.dodream.web.fitners.common.controller"})
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override

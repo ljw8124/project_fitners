@@ -2,6 +2,8 @@ package org.dodream.web.fitners.common.config;
 
 
 import lombok.extern.log4j.Log4j2;
+import org.dodream.web.fitners.security.config.SecurityConfig;
+import org.dodream.web.fitners.security.config.SecurityServletConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import javax.servlet.Filter;
@@ -17,7 +19,7 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
         log.info("1----------------------------------1");
         log.info("1----------------------------------1");
 
-        return new Class[]{RootConfig.class};
+        return new Class[]{RootConfig.class, SecurityConfig.class};
     }
 
     @Override //서블릿연결
@@ -26,7 +28,7 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
         log.info("2----------------------------------2");
         log.info("2----------------------------------2");
 
-        return new Class[]{ServletConfig.class};
+        return new Class[]{ServletConfig.class, SecurityServletConfig.class};
     }
 
     @Override //서블릿매핑

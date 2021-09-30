@@ -7,6 +7,7 @@ import org.dodream.web.fitners.common.dto.PageRequestDTO;
 import org.dodream.web.fitners.common.dto.PageResponseDTO;
 import org.dodream.web.fitners.fboard.dto.FboardDTO;
 import org.dodream.web.fitners.fboard.service.FboardService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,7 @@ public class FboardController {
 
     private final FboardService fboardService;
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/register")
     public void registerGet() {
         log.warn("=========================fboard register get =======================");
@@ -64,6 +66,7 @@ public class FboardController {
         log.warn("=======getList success======");
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping(value = {"/read", "/modify"})
     public void readGet(FboardDTO fboardDTO, PageRequestDTO pageRequestDTO, Model model) {
         log.warn("=====================fboard read get=============" + fboardDTO.getBno());
@@ -73,6 +76,7 @@ public class FboardController {
         log.warn(fboardService.read(fboardDTO.getBno()));
     }
 
+    @PreAuthorize("principal.mid == #fboardDTO.writer")
     @PostMapping("/modify")
     public String modifyPost(FboardDTO fboardDTO, PageRequestDTO pageRequestDTO, RedirectAttributes redirectAttributes) {
         log.warn("==================fboard modify post===========");
@@ -92,6 +96,11 @@ public class FboardController {
         redirectAttributes.addAttribute("bno", fboardDTO.getBno()); //flash가 아닌 계속 bno를 가지고 있게함
         redirectAttributes.addAttribute("page", pageRequestDTO.getPage());
         redirectAttributes.addAttribute("size", pageRequestDTO.getSize());
+
+        if(pageRequestDTO.getType() != null) {
+            redirectAttributes.addAttribute("type", pageRequestDTO.getType());
+            redirectAttributes.addAttribute("keyword", pageRequestDTO.getKeyword());
+        }
 
         return "redirect:/fboard/read";
     }

@@ -1,8 +1,7 @@
 package org.dodream.web.fitners.auction.mapper;
 
 import org.dodream.web.fitners.auction.domain.Auction;
-import org.dodream.web.fitners.common.domain.Member;
-import org.dodream.web.fitners.common.domain.MemberPhysical;
+import org.dodream.web.fitners.security.domain.MemberPhysical;
 
 public interface AuctionMapper {
 

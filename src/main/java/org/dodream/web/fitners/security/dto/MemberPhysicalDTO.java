@@ -1,4 +1,4 @@
-package org.dodream.web.fitners.common.dto;
+package org.dodream.web.fitners.security.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -35,7 +35,7 @@
 
     </select>
 
-    <select id="selectMemberPhysical" resultType="org.dodream.web.fitners.common.domain.MemberPhysical">
+    <select id="selectMemberPhysical" resultType="org.dodream.web.fitners.security.domain.MemberPhysical">
         select * from tbl_member_physical where mid = #{mid}
     </select>
 

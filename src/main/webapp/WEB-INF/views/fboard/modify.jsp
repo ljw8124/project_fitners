@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10" style="margin: auto">
-                <div class="card card-primary">
+                <div class="card card-gray">
                     <div class="card-header">
                         <h3 class="card-title">${boardDTO.bno}번 게시글 수정</h3>
                     </div>

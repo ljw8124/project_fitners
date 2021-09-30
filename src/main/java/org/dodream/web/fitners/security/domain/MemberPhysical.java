@@ -1,7 +1,7 @@
-package org.dodream.web.fitners.common.domain;
+package org.dodream.web.fitners.security.domain;
 
 import lombok.*;
-import org.dodream.web.fitners.common.dto.MemberPhysicalDTO;
+import org.dodream.web.fitners.security.dto.MemberPhysicalDTO;
 
 import java.sql.Timestamp;
 
@@ -32,7 +32,6 @@ public class MemberPhysical {
                 .regDate(regDate)
                 .modDate(modDate)
                 .build();
-
         return memberPhysicalDTO;
     }
 

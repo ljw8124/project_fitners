@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10" style="margin: auto">
-                <div class="card card-primary">
+                <div class="card card-gray">
                     <div class="card-header">
                         <h3 class="card-title">자유게시판 글 작성</h3>
                     </div>
