@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@include file="../includes/fboardheader.jsp" %>
 
 <section class="content" style="margin-top: 10px">
@@ -16,11 +17,15 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="fboardTitle">제목</label>
-                                <input type="text" name="title" class="form-control col-5" placeholder="제목을 입력하세요..." id="fboardTitle">
+                                <input type="text" name="title" class="form-control col-5"
+                                       placeholder="제목을 입력하세요..." id="fboardTitle">
                             </div>
                             <div>
                                 <label for="fboardWriter">작성자</label>
-                                <input type="text" name="writer" class="form-control col-5" placeholder="작성자를 입력하세요..." id="fboardWriter">
+                                <input type="text" name="writer" class="form-control col-5"
+                                       placeholder="작성자를 입력하세요..." id="fboardWriter"
+                                       value="<sec:authentication property="principal.mid"/>"
+                                       readonly>
                             </div>
                             <div>
                                 <label for="fboardContent"></label>
@@ -42,7 +47,8 @@
                             <input type="file" name="uploadFiles" id="fileInputLabel" multiple>
                             <label for="fileInputLabel"></label>
 
-                            <button type="button" class="btn btn-info" id="uploadBtn" style="alignment: right">upload</button>
+                            <button type="button" class="btn btn-info" id="uploadBtn"
+                                    style="alignment: right">upload</button>
                         </span>
 
                         <div class="uploadResult">

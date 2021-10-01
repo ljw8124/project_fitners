@@ -14,22 +14,28 @@
             <button type="button" class="togglebtn" id="moveLogin" style="color: white" onclick="login()">LOG IN</button>
             <button type="button" class="togglebtn" id="moveRegister" onclick="register()">SIGN IN</button>
         </div>
+        <div class="" style="text-align: center">
+            <img src="/resources/images/fitnerslogo.png" style="height: 16%">
+        </div>
         <form id="login" action="/login" method="post" class="input-group">
-            <input type="text" class="input-field" placeholder="Enter id" name="username" required>
+            <input type="text" class="input-field" placeholder="Enter User ID" name="username" required>
             <input type="password" class="input-field" placeholder="Enter Password" name="password" required>
             <input type="checkbox" class="checkbox" name="remember-me"><span>자동로그인</span>
             <button class="submit">Login</button>
         </form>
         <form id="register" action="/signin" method="post" class="input-group">
-            <input type="text" class="input-field" placeholder="User name" name="mid" required>
+            <input type="text" class="input-field" placeholder="Enter User ID" name="mid" required>
             <input type="password" class="input-field" placeholder="Enter Password" name="mpassword" required>
             <input type="text" class="input-field" placeholder="Enter name" name="mname" required>
-            <input type="email" class="input-field" placeholder="Your Email" name="memail" required>
+            <input type="email" class="input-field" placeholder="Enter Email" name="memail" required>
             <input type="checkbox" class="checkbox"><span>회원 가입에 동의합니다</span>
             <button class="submit">SIGN IN</button>
         </form>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <script>
     var loginBtn = document.getElementById("login");
     var registerBtn = document.getElementById("register");

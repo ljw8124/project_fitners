@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@include file="../includes/fboardheader.jsp" %>
 
 
@@ -36,7 +37,10 @@
                             </div>
                             <div class="card-footer">
                                 <button type="button" class="btn btn-info float-left toListBtn">목록</button>
+                                <sec:authentication property="principal" var="memberDTO"/>
+                                <c:if test="${boardDTO.writer eq memberDTO.mid}">
                                 <button type="button" class="btn btn-warning float-right toModifyBtn">수정/삭제</button>
+                                </c:if>
                             </div>
                         </div>
                     </form>
@@ -87,13 +91,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                작성자 : <input type="text" name="replyer" value="ID를 입력하세요"><br>
-                내용 : <input type="text" name="reply" value="내용을 입력하세요">
+                작성자 : <input type="text" name="replyer" value="<sec:authentication property="principal.mid"/>"
+                             readonly><br>
+                내용 : <input type="text" name="reply" placeholder="내용을 입력하세요">
 
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-                <button type="button" class="btn btn-primary operBtn">save change</button>
+                <button type="button" class="btn btn-primary operBtn">등록</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -113,6 +118,7 @@
                 </button>
             </div>
             <div class="modal-body">
+                <input type="hidden" name="rno" readonly value="<sec:authentication property="principal.mid"/>">
                 작성자 : <input type="text" name="replyerMod">
                 내용 : <input type="text" name="replyMod">
             </div>

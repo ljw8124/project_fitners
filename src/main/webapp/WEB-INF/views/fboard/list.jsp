@@ -1,6 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@include file="../includes/fboardheader.jsp" %>
 <style>
     a:link {
@@ -13,7 +14,7 @@
     <!-- /.row -->
     <div class="row" style="margin-top: 15px">
         <div class="col-10" style="margin: auto">
-            <div class="card">
+            <div class="card card-gray">
                 <div class="card-header">
                     <h3 class="card-title text-center">자유게시판</h3>
 
@@ -116,9 +117,9 @@
         <c:if test="${pageMaker.next}">
             <li class="page-item"><a class="page-link" href="javascript:movePage(${pageMaker.end + 1})"> >> </a></li>
         </c:if>
-
+        <sec:authorize access="isAuthenticated()">
         <button type="button" class="btn btn-block btn-outline-primary toRegisterBtn">글쓰기</button>
-
+        </sec:authorize>
     </div>
 </div>
 </section>
