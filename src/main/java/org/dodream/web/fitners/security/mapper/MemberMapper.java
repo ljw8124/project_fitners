@@ -6,4 +6,7 @@ import org.dodream.web.fitners.security.domain.MemberPhysical;
 public interface MemberMapper {
 
     Member findByMid(String mid);
+
+    void signUpMember(Member member);
+
 }

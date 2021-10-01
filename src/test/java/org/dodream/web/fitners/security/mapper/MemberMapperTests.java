@@ -35,10 +35,29 @@ public class MemberMapperTests {
 
     @Test
     public void testEncode(){
-        String str = "ljw8124";
+        String str = "yong025";
         String enStr = passwordEncoder.encode(str);
 
         log.warn(enStr);
+    }
+
+    @Test
+    public void signUpTest() {
+        String mid = "taeito92";
+        String mpassword = "taeito92";
+        String bcriptMpw = passwordEncoder.encode(mpassword);
+        String mname = "성윤정";
+        String memail = "taeito92@naver.com";
+
+        Member member = Member.builder()
+                .mid(mid)
+                .mpassword(bcriptMpw)
+                .mname(mname)
+                .memail(memail)
+                .build();
+
+        memberMapper.signUpMember(member);
+
     }
 
 

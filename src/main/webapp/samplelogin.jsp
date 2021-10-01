@@ -11,22 +11,22 @@
     <div class="form-wrap">
         <div class="button-wrap">
             <div id="btn"></div>
-            <button type="button" class="togglebtn" id="moveLogin" style="color: white" onclick="login()">LOG IN</button>
-            <button type="button" class="togglebtn" id="moveRegister" onclick="register()">SIGN IN</button>
+            <button type="button" class="togglebtn" id="moveLogin" onclick="login()">LOG IN</button>
+            <button type="button" class="togglebtn" id="moveRegister" onclick="register()">REGISTER</button>
         </div>
-        <form id="login" action="/login" method="post" class="input-group">
-            <input type="text" class="input-field" placeholder="Enter id" name="username" required>
+        <form id="login" action="" class="input-group">
+            <input type="text" class="input-field" placeholder="User id" name="username" required>
             <input type="password" class="input-field" placeholder="Enter Password" name="password" required>
             <input type="checkbox" class="checkbox" name="remember-me"><span>자동로그인</span>
             <button class="submit">Login</button>
         </form>
-        <form id="register" action="/signin" method="post" class="input-group">
+        <form id="register" action="" class="input-group">
             <input type="text" class="input-field" placeholder="User name" name="mid" required>
             <input type="password" class="input-field" placeholder="Enter Password" name="mpassword" required>
             <input type="text" class="input-field" placeholder="Enter name" name="mname" required>
             <input type="email" class="input-field" placeholder="Your Email" name="memail" required>
             <input type="checkbox" class="checkbox"><span>회원 가입에 동의합니다</span>
-            <button class="submit">SIGN IN</button>
+            <button class="submit">REGISTER</button>
         </form>
     </div>
 </div>
@@ -34,24 +34,24 @@
     var loginBtn = document.getElementById("login");
     var registerBtn = document.getElementById("register");
     var moveBtn = document.getElementById("btn");
-    var moveLogin = document.getElementById("moveLogin")
-    var moveRegister = document.getElementById("moveRegister")
+    var moveLogin = document.getElementById("moveLogin");
+    var moveRegister = document.getElementById("moveRegister");
 
 
     function login(){
         loginBtn.style.left = "50px";
         registerBtn.style.left = "450px";
         moveBtn.style.left = "0";
-        moveLogin.style.color = "white"
-        moveRegister.style.color = "black"
+        moveLogin.style.color = "white";
+        moveRegister.style.color = "black";
     }
 
     function register(){
         loginBtn.style.left = "-400px";
         registerBtn.style.left = "50px";
         moveBtn.style.left = "110px";
-        moveLogin.style.color = "black"
-        moveRegister.style.color = "white"
+        moveRegister.style.color = "white";
+        moveLogin.style.color = "black";
     }
 </script>
 </body>

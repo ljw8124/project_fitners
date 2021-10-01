@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuctionController {
 
     private final AuctionService auctionService;
-    private final CustomUserDetailsService memberService;
 
     @GetMapping("/read")
     public void getRead(AuctionDTO auctionDTO, Model model) {

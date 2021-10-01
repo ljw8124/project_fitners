@@ -33,7 +33,7 @@ public class RootConfig {
     public DataSource dataSource() {
         HikariConfig config = new HikariConfig();
         config.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");
-        config.setJdbcUrl("jdbc:log4jdbc:mysql://106.241.252.51:1524/dodream");
+        config.setJdbcUrl("jdbc:log4jdbc:mysql://106.241.252.51:1524/dodream?allowMultiQueries=true");
         config.setUsername("dodream");
         config.setPassword("dodream1");
 

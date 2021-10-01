@@ -19,7 +19,6 @@ public class MemberDTO extends User {
     private String mpassword;
     private String mname;
     private String memail;
-    private String role;
     private Timestamp regDate;
     private Timestamp modDate;
     private boolean disabled;

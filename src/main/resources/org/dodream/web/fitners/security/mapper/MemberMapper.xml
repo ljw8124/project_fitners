@@ -27,4 +27,9 @@
         where m.mid = #{mid}
     </select>
 
+    <insert id="signUpMember">
+        insert into tbl_member (mid, mpassword, mname, memail) values (#{mid}, #{mpassword}, #{mname}, #{memail});
+        insert into tbl_member_role (mid, role) values (#{mid}, 'ROLE_MEMBER')
+    </insert>
+
 </mapper>
