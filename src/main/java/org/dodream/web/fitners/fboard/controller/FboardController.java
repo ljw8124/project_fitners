@@ -71,9 +71,11 @@ public class FboardController {
     public void readGet(FboardDTO fboardDTO, PageRequestDTO pageRequestDTO, Model model) {
         log.warn("=====================fboard read get=============" + fboardDTO.getBno());
 
-        model.addAttribute("boardDTO", fboardService.read(fboardDTO.getBno()));
+        FboardDTO getFboardDTO = fboardService.read(fboardDTO.getBno());
+        model.addAttribute("boardDTO", getFboardDTO);
 
-        log.warn(fboardService.read(fboardDTO.getBno()));
+        log.warn(getFboardDTO);
+        log.warn("===============getFbordDTO.getBno : " + getFboardDTO.getBno());
     }
 
     @PreAuthorize("principal.mid == #fboardDTO.writer")

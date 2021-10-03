@@ -3,7 +3,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@include file="../includes/fboardheader.jsp" %>
 
-
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
         <div class="row">
@@ -32,6 +31,7 @@
                                           placeholder="내용을 입력하세요..." readonly><c:out
                                         value="${boardDTO.content}"/></textarea>
                             </div>
+                            <div style="text-align: right; margin-top: 5px"><h6>조회수 : ${boardDTO.viewCount}</h6></div>
                             <div class="temp">
                                 <!-- 실제 attach div 자리 -->
                             </div>
@@ -39,7 +39,7 @@
                                 <button type="button" class="btn btn-info float-left toListBtn">목록</button>
                                 <sec:authentication property="principal" var="memberDTO"/>
                                 <c:if test="${boardDTO.writer eq memberDTO.mid}">
-                                <button type="button" class="btn btn-warning float-right toModifyBtn">수정/삭제</button>
+                                    <button type="button" class="btn btn-warning float-right toModifyBtn">수정/삭제</button>
                                 </c:if>
                             </div>
                         </div>
@@ -61,13 +61,21 @@
                     <hr>
                     <div class="card direct-chat direct-chat-primary">
                         <div class="card-header">
-                            <h3 class="card-title">댓글</h3>
-                            <span title="3 New Messages" class="badge badge-primary" id="addReplyBtn">+</span>
+                            <div class="input-group input-group-sm mb-0 col-6">
+                                <input type="text"class="form-control form-control-sm"
+                                       name="reply" placeholder="댓글내용을 입력하세요">
+                                <input type="hidden" name="replyer"
+                                       value="<sec:authentication property="principal.mid"/>">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-info operBtn">작성</button>
+                                </div>
+                            </div>
 
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <div class="direct-chat-messages" id="repliesList">
+
                                 <!-- /.replies -->
                             </div>
                             <!--/.replies -->
@@ -80,33 +88,6 @@
     </div>
 </section>
 
-<%-- modal start --%>
-<div class="modal fade" id="modal-sm">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">댓글작성</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                작성자 : <input type="text" name="replyer" value="<sec:authentication property="principal.mid"/>"
-                             readonly><br>
-                내용 : <input type="text" name="reply" placeholder="내용을 입력하세요">
-
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-                <button type="button" class="btn btn-primary operBtn">등록</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal exd-->
-
 <!-- large modal -->
 <div class="modal fade" id="modal-lg">
     <div class="modal-dialog modal-lg">
@@ -118,9 +99,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                <input type="hidden" name="rno" readonly value="<sec:authentication property="principal.mid"/>">
-                작성자 : <input type="text" name="replyerMod">
-                내용 : <input type="text" name="replyMod">
+                <input type="hidden" name="rno">
+                <input type="hidden" name="replyerMod" readonly value="<sec:authentication property="principal.mid"/>">
+                수정 내용 :
+                <input type="text" name="replyMod">
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -180,15 +162,18 @@
 
             const {rno, bno, reply, replyer, regDate, modDate} = {...replyObj}
 
-            const replyList = `<div class="fboard-reply">
-                <div style="margin-left: 15px">
-                    <div><strong>\${replyer}</strong></div>
-                    <div data-rno='\${rno}' data-replyer='\${replyer}'>
-                       \${reply}
+            const replyList = `<div class="direct-chat-msg fboard-reply">
+                <div class="direct-chat-infos clearfix" style="margin-left: 15px">
+                    <div class="direct-chat-name float-left">
+                        <span>
+                            <strong>\${replyer}</strong>
+                        </span>
+                    </div><br>
+                    <div data-rno='\${rno}' data-replyer='\${replyer}'
+                        class="direct-chat-text float-left col-6" style="margin-left: 0px" ">\${reply}
                     </div>
-                    <div style="font-size: 4pt">\${regDate}</div>
-                </div>
-                <hr>`
+                    <div class="direct-chat-timestamp float-right">\${regDate}</div>
+                </div>`
             return replyList
         }
 
@@ -207,16 +192,6 @@
     })()
 
     //댓글추가
-    const smModalDiv = $('#modal-sm')
-
-    let oper = null
-
-    document.querySelector("#addReplyBtn").addEventListener("click", function () {
-
-        oper = 'add'
-        smModalDiv.modal('show')
-
-    }, false)
 
     document.querySelector(".operBtn").addEventListener("click", function () {
 
@@ -224,17 +199,15 @@
         const replyer = document.querySelector("input[name='replyer']").value //jQuery
         const reply = document.querySelector("input[name='reply']").value
 
-        if (oper === 'add') {
-            const replyObj = {bno: bno, replyer: replyer, reply: reply} //키값 할당
-            console.log(replyObj)
+        const replyObj = {bno: bno, replyer: replyer, reply: reply} //키값 할당
+        console.log(replyObj)
 
-            addReply(replyObj).then(result => {
-                getRepliesList() //갱신목적 함수
-                smModalDiv.modal('hide')
-                document.querySelector("input[name='replyer']").value = ""
-                document.querySelector("input[name='reply']").value = ""
-            })
-        }
+        addReply(replyObj).then(result => {
+            getRepliesList() //갱신목적 함수
+            document.querySelector("input[name='replyer']").value = ""
+            document.querySelector("input[name='reply']").value = ""
+        })
+
 
     }, false)
 
@@ -248,7 +221,7 @@
 
         const target = e.target
         const bno = '${boardDTO.bno}'
-        if (target.matches("#repliesList")) {
+        if (target.matches(".direct-chat-text")) {
             const rno = target.getAttribute("data-rno")
             const replyer = target.getAttribute("data-replyer")
             const reply = target.innerHTML
@@ -266,9 +239,9 @@
 
             modModal.modal('show')
         }
-    },false)
+    }, false)
 
-    document.querySelector(".btnRem").addEventListener("click" ,(e) => {
+    document.querySelector(".btnRem").addEventListener("click", (e) => {
         const rno = e.target.getAttribute("data-rno")
 
         removeReply(rno).then(result => {
@@ -276,10 +249,10 @@
 
             modModal.modal('hide');
         })
-    },false)
+    }, false)
 
-    document.querySelector(".btnModReply").addEventListener("click" , (e) => {
-        const replyObj = {rno:modRno.value, reply:modReply.value}
+    document.querySelector(".btnModReply").addEventListener("click", (e) => {
+        const replyObj = {rno: modRno.value, reply: modReply.value}
 
         modifyReply(replyObj).then(result => {
             getRepliesList()
@@ -287,7 +260,7 @@
             modModal.modal("hide")
         })
 
-    },false)
+    }, false)
 
 </script>
 <!-- 댓글목록 -->

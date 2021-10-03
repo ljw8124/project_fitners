@@ -39,4 +39,33 @@
         select * from tbl_member_physical where mid = #{mid}
     </select>
 
+    <insert id="insertMemberPhysical">
+        insert into tbl_member_physical (mid, height, weight, age, sex, diseases)
+        values (#{mid}, #{height}, #{weight}, #{age}, #{sex}, #{diseases})
+    </insert>
+
+    <!-- auction 작성 -->
+    <insert id="insertAuction">
+        insert into tbl_auction (location, mid, price, membership, title)
+        values (#{location}, #{mid}, #{price}, #{membership}, #{title})
+    </insert>
+
+    <!-- 해당 경매에 category 넣을 때 -->
+    <insert id="insertAuctionCategory">
+        insert into tbl_auction_category (ano, module, detail)
+        values (#{ano}, #{module}, #{detail})
+    </insert>
+
+    <!-- 원하는 프로그램이 없을 때 넣음 -->
+    <insert id="insertProgram">
+        insert into tbl_program (module, detail) values (#{module}, #{detail})
+    </insert>
+
+    <select id="selectProgram" resultType="org.dodream.web.fitners.auction.domain.Program">
+        select * from tbl_program
+    </select>
+
+
+
+
 </mapper>

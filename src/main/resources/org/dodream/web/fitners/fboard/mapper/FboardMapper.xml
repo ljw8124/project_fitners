@@ -47,6 +47,7 @@
         <result property="writer" column="writer"/>
         <result property="regDate" column="regDate"/>
         <result property="modDate" column="modDate"/>
+        <result property="viewCount" column="viewCount"/>
 
         <collection property="attachList" resultMap="attachMap"/>
     </resultMap>
@@ -83,5 +84,10 @@
     <delete id="deleteAttach">
         delete from tbl_fboard_attach where bno = #{bno}
     </delete>
+
+    <update id="updateViewCount">
+        update tbl_fboard set viewCount = viewCount + 1
+        where bno = #{bno}
+    </update>
 
 </mapper>

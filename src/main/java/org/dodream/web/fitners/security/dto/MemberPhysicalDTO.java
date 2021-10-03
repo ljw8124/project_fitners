@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.dodream.web.fitners.security.domain.MemberPhysical;
 
 import java.sql.Timestamp;
 
@@ -21,5 +22,19 @@ public class MemberPhysicalDTO {
     private String diseases;
     private Timestamp regDate;
     private Timestamp modDate;
+
+    public MemberPhysical getDomain() {
+        MemberPhysical memberPhysical = MemberPhysical.builder()
+                .mid(mid)
+                .height(height)
+                .weight(weight)
+                .age(age)
+                .sex(sex)
+                .diseases(diseases)
+                .regDate(regDate)
+                .modDate(modDate)
+                .build();
+        return memberPhysical;
+    }
 
 }

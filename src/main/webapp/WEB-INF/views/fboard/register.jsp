@@ -41,7 +41,7 @@
                         </div>
                     </form>
                     <hr>
-                    <div style="margin-left: 15px">
+                    <div style="margin-left: 15px; margin-bottom: 15px">
                         <label for="fboardAttach">파일 첨부</label>
                         <span class="input-group" id="fboardAttach">
                             <input type="file" name="uploadFiles" id="fileInputLabel" multiple>

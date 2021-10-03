@@ -46,15 +46,17 @@
                                     <th>제목</th>
                                     <th>작성자</th>
                                     <th>작성일</th>
+                                    <th>조회수</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <c:forEach items="${dtoList}" var="dto">
                                     <tr>
-                                        <td class="bnoTh"><c:out value="${dto.bno}"></c:out></td>
-                                        <td><a href="javascript:moveRead(${dto.bno})"><c:out value="${dto.title}"></c:out></a></td>
-                                        <td><c:out value="${dto.writer}"></c:out></td>
-                                        <td><c:out value="${dto.regDate}"></c:out></td>
+                                        <td class="bnoTh"><c:out value="${dto.bno}"/></td>
+                                        <td><a href="javascript:moveRead(${dto.bno})"><c:out value="${dto.title}"/></a></td>
+                                        <td><c:out value="${dto.writer}"/></td>
+                                        <td><c:out value="${dto.regDate}"/></td>
+                                        <td><c:out value="${dto.viewCount}"/> </td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>

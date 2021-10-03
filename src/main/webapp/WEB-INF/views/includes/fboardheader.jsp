@@ -38,7 +38,7 @@
 </head>
 <style>
     * {
-        font-family: '한컴 말랑말랑 Regular';
+        font-family: 'G마켓 산스 TTF Medium' !important;
     }
     .about{
         font-size: 16px;

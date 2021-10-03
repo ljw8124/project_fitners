@@ -56,4 +56,9 @@ public class FboardMapperTests {
         fboardMapper.delete(1L);
     }
 
+    @Test
+    public void updateViewCountTest() {
+        fboardMapper.updateViewCount(144L);
+    }
+
 }
