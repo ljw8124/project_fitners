@@ -18,14 +18,14 @@
                             <div class="form-group">
                                 <label for="fboardTitle">제목</label>
                                 <input type="text" name="title" class="form-control col-5"
-                                       placeholder="제목을 입력하세요..." id="fboardTitle">
+                                       placeholder="제목을 입력하세요..." id="fboardTitle" required>
                             </div>
                             <div>
                                 <label for="fboardWriter">작성자</label>
                                 <input type="text" name="writer" class="form-control col-5"
                                        placeholder="작성자를 입력하세요..." id="fboardWriter"
                                        value="<sec:authentication property="principal.mid"/>"
-                                       readonly>
+                                       required readonly>
                             </div>
                             <div>
                                 <label for="fboardContent"></label>

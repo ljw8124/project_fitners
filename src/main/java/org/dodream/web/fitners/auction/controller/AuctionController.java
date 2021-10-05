@@ -38,6 +38,7 @@ public class AuctionController {
 
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/register")
     public void getRegister() {
         log.warn("=========================auction get register=================");

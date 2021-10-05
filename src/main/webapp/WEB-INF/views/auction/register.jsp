@@ -17,7 +17,7 @@
                         <!-- text input -->
                         <div class="form-group">
                             <label>제목</label>
-                            <input type="text" class="form-control" placeholder="제목을 입력하세요" name="title">
+                            <input type="text" class="form-control" placeholder="제목을 입력하세요" name="title" required>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                             <label>작성자</label>
                             <input type="text" class="form-control" placeholder="Enter ..." name="mid"
                                    value="<sec:authentication property="principal.mid"/>"
-                                   readonly>
+                                   readonly required>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <div class="col-sm-2">
                         <label>나이</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="ex) 26" name="age">
+                            <input type="text" class="form-control" placeholder="ex) 26" name="age" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">세</span>
                             </div>
@@ -53,7 +53,7 @@
                     <div class="col-sm-2">
                         <label>키</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="ex) 172" name="height">
+                            <input type="text" class="form-control" placeholder="ex) 172" name="height" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">cm</span>
                             </div>
@@ -62,7 +62,7 @@
                     <div class="col-sm-2">
                         <label>몸무게</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="ex) 70" name="weight">
+                            <input type="text" class="form-control" placeholder="ex) 70" name="weight" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">kg</span>
                             </div>
@@ -79,13 +79,13 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label>희망 장소</label>
-                            <input type="text" class="form-control" placeholder="ex) 서울시 종로구 관철동" name="location">
+                            <input type="text" class="form-control" placeholder="ex) 서울시 종로구 관철동" name="location" required>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <label>희망 횟수</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="ex) 30" name="membership">
+                            <input type="text" class="form-control" placeholder="ex) 30" name="membership" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">회</span>
                             </div>
@@ -97,7 +97,7 @@
                 <div class="form-group">
                     <label class="col-form-label" for="wantedPrice"><i class="fas fa-check"></i> 원하는 가격</label>
                     <div class="input-group" id="wantedPrice">
-                        <input type="text" name="price" class="form-control is-valid col-3" placeholder="1회당 가격을 입력하세요">
+                        <input type="text" name="price" class="form-control is-valid col-3" placeholder="1회당 가격을 입력하세요" required>
                         <div class="input-group-append">
                             <span class="input-group-text">원</span>
                         </div>
@@ -109,10 +109,7 @@
                         <input type="hidden" name="ano" value="${ano}">
                         <select multiple class="form-control">
                             <option>option 1</option>
-                            <option>option 2</option>
-                            <option>option 3</option>
-                            <option>option 4</option>
-                            <option>option 5</option>
+
                         </select>
                     </div>
                     <div>

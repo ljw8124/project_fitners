@@ -35,6 +35,7 @@ public class AuctionServiceImpl implements AuctionService {
     public Long registerAuction(AuctionDTO auctionDTO,  MemberPhysicalDTO memberPhysicalDTO) {
 
         //auctionMapper.insertAuctionCategory(programDTO.getDomain());
+
         auctionMapper.insertMemberPhysical(memberPhysicalDTO.getDomain());
 
         return auctionMapper.insertAuction(auctionDTO.getDomain());

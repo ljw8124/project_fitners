@@ -31,7 +31,7 @@
                                           placeholder="내용을 입력하세요..." readonly><c:out
                                         value="${boardDTO.content}"/></textarea>
                             </div>
-                            <div style="text-align: right; margin-top: 5px"><h6>조회수 : ${boardDTO.viewCount}</h6></div>
+                            <div style="text-align: right; margin-top: 5px"><h6>조회수 : ${boardDTO.viewCount + 1}</h6></div>
                             <div class="temp">
                                 <!-- 실제 attach div 자리 -->
                             </div>

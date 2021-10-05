@@ -34,7 +34,7 @@ public class MemberMapperTests {
 
     @Test
     public void testEncode(){
-        String str = "yong025";
+        String str = "yojino3";
         String enStr = passwordEncoder.encode(str);
 
         log.warn(enStr);

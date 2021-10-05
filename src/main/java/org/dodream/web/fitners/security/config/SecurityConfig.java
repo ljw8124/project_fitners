@@ -16,6 +16,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.logout.LogoutHandler;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
@@ -56,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     //권한점검
     @Bean
-    public CustomAuthenticationEntryPoint customAuthenticationEntryPoint(){
+    public CustomAuthenticationEntryPoint customAuthenticationEntryPoint() {
         return new CustomAuthenticationEntryPoint();
     }
 
@@ -66,6 +68,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new CustomLoginSuccessHandler();
     }
 
+
     //customLogin접근코드
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -74,9 +77,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable();
         http.rememberMe().tokenRepository(persistentTokenRepository())
-                .key("zerock").tokenValiditySeconds(60*60*24*30);
+                .key("zerock").tokenValiditySeconds(60 * 60 * 24 * 30);
 
         http.exceptionHandling().authenticationEntryPoint(customAuthenticationEntryPoint());
+
+        http.logout()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/customLogin")
+                .invalidateHttpSession(true).deleteCookies("JSESSIONID", "remember-me");
     }
 
     @Override

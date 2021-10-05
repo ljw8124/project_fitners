@@ -134,7 +134,12 @@
                 <li class="nav-item"><a href="/auction/list" class="nav-link">Matching</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Self Management</a></li>
                 <li class="nav-item"><a href="/fboard/list" class="nav-link">FreeBoard</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Login</a></li>
+                <sec:authorize access="isAnonymous()">
+                    <li class="nav-item"><a href="/customLogin" class="nav-link">Login</a></li>
+                </sec:authorize>
+                <sec:authorize access="isAuthenticated()">
+                    <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+                </sec:authorize>
 
             </ul>
         </div>
