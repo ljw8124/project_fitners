@@ -48,13 +48,14 @@ public class AuctionMapperTests {
 
     @Test
     public void insertAuctionCategory() {
-        Program auctionCategory = Program.builder()
-                .ano(6L)
-                .module("PT")
-                .detail("바디프로필 목적")
+
+        Program program = Program.builder()
+                .ano(1L)
+                .module("재활")
+                .detail("일자목 교정")
                 .build();
 
-        auctionMapper.insertAuctionCategory(auctionCategory);
+        auctionMapper.insertAuctionCategory(program);
     }
 
     @Test
@@ -79,6 +80,11 @@ public class AuctionMapperTests {
                 .build();
 
         auctionMapper.insertMemberPhysical(memberPhysical);
+    }
+
+    @Test
+    public void getProgramListTest() {
+        auctionMapper.getProgramList();
     }
 
 

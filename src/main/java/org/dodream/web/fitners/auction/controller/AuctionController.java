@@ -1,5 +1,6 @@
 package org.dodream.web.fitners.auction.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.dodream.web.fitners.auction.dto.AuctionDTO;
@@ -40,21 +41,24 @@ public class AuctionController {
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/register")
-    public void getRegister() {
-        log.warn("=========================auction get register=================");
+    public void getRegister(ProgramDTO programDTO, Model model) {
+     log.warn("=========================auction get register=================");
+        List<ProgramDTO> programDTOList = auctionService.getProgram();
+        model.addAttribute("program", programDTOList);
     }
 
     @PostMapping("/register")
-    public String postRegister(AuctionDTO auctionDTO, MemberPhysicalDTO memberPhysicalDTO, Model model) {
+    public String postRegister(AuctionDTO auctionDTO,ProgramDTO programDTO, MemberPhysicalDTO memberPhysicalDTO, Model model) {
         log.warn("========================auction post register start=================" + auctionDTO, memberPhysicalDTO);
 
-        Long ano = auctionService.registerAuction(auctionDTO, memberPhysicalDTO);
+        Long ano = auctionService.registerAuction(auctionDTO, memberPhysicalDTO, programDTO);
 
         model.addAttribute("ano", ano);
+
+
         log.warn("=======================auction post register success================");
 
         return "redirect:/auction/list";
-
     }
 
 }

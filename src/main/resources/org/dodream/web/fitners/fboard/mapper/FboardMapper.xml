@@ -37,7 +37,9 @@
     </select>
 
     <select id="getCount" resultType="int">
-        select count(bno) from tbl_fboard;
+        select count(bno) from tbl_fboard
+
+        <include refid="search"></include>
     </select>
 
     <resultMap id="boardMap" type="org.dodream.web.fitners.fboard.domain.Fboard">

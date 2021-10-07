@@ -6,7 +6,7 @@
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10" style="margin: auto">
+            <div class="col-md-8" style="margin: auto">
                 <div class="card card-gray">
                     <div class="card-header">
                         <h3 class="card-title">${boardDTO.bno}번 게시글 수정</h3>
@@ -38,7 +38,8 @@
                             <div class="card-footer">
                                 <button type="button" class="btn btn-info float-left" id="toListBtn">목록</button>
                                 <button type="button" class="btn btn-warning float-right" id="modifyBtn">수정</button>
-                                <button type="button" class="btn btn-danger float-right" id="removeBtn">삭제</button>
+                                <button type="button" class="btn btn-danger float-right" id="removeBtn"
+                                style="margin-right: 5px">삭제</button>
                             </div>
                         </div>
                     </form>

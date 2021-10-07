@@ -38,9 +38,7 @@
 
 </head>
 <style>
-    * {
-        font-family: 'G마켓 산스 TTF Medium' !important;
-    }
+
     .about{
         font-size: 16px;
         font-weight: 400;
@@ -122,15 +120,6 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="/index.jsp" class="nav-link">Home</a></li>
-                <!--	          <li class="nav-item dropdown">-->
-                <!--              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>-->
-                <!--              <div class="dropdown-menu" aria-labelledby="dropdown04">-->
-                <!--              	<a class="dropdown-item" href="shop.html">Shop</a>-->
-                <!--                <a class="dropdown-item" href="product-single.html">Single Product</a>-->
-                <!--                <a class="dropdown-item" href="cart.html">Cart</a>-->
-                <!--                <a class="dropdown-item" href="checkout.html">Checkout</a>-->
-                <!--              </div>-->
-                <!--            </li>-->
                 <li class="nav-item"><a href="/about.jsp" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/auction/list" class="nav-link">Matching</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Self Management</a></li>
@@ -141,7 +130,6 @@
                 <sec:authorize access="isAuthenticated()">
                     <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
                 </sec:authorize>
-
             </ul>
         </div>
     </div>

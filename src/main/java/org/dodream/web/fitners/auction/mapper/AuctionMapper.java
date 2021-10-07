@@ -18,10 +18,14 @@ public interface AuctionMapper {
     //auction작성
     Long insertAuction(Auction auction);
 
-    void insertAuctionCategory(Program program);
-
     void insertProgram(Program program);
 
     List<Program> selectProgram();
     //auction작성 끝
+
+
+    //실제 list에 program
+    void insertAuctionCategory(Program program);
+
+    List<Program> getProgramList();
 }

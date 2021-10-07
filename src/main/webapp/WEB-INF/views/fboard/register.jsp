@@ -6,7 +6,7 @@
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10" style="margin: auto">
+            <div class="col-md-8" style="margin: auto">
                 <div class="card card-gray">
                     <div class="card-header">
                         <h3 class="card-title">자유게시판 글 작성</h3>
@@ -35,8 +35,8 @@
                             <div class="temp">
                                 <!-- 실제 attach div 자리 -->
                             </div>
-                            <div class="card-footer">
-                                <button type="submit" id="submitBtn" class="btn btn-info float-right">SUBMIT</button>
+                            <div class="btn float-right">
+                                <button type="submit" id="submitBtn" class="btn btn-block btn-outline-primary">SUBMIT</button>
                             </div>
                         </div>
                     </form>

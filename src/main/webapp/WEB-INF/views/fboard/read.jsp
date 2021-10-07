@@ -6,7 +6,7 @@
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10" style="margin: auto">
+            <div class="col-md-8" style="margin: auto">
                 <div class="card card-gray">
                     <div class="card-header">
                         <h3 class="card-title text-center">자유게시판</h3>

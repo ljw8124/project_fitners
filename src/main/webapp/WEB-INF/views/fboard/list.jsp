@@ -1,6 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@include file="../includes/fboardheader.jsp" %>
 <style>
@@ -13,24 +14,10 @@
 <section class="listSection">
     <!-- /.row -->
     <div class="row" style="margin-top: 15px">
-        <div class="col-10" style="margin: auto">
+        <div class="col-8" style="margin: auto">
             <div class="card card-gray">
-                <div class="card-header">
-                    <h3 class="card-title text-center">자유게시판</h3>
-
-
-
-                    <%--<div class="card-tools float-right">
-                        <div class="input-group input-group-sm" style="width: 500px;">
-                            <input type="text" name="table_search" class="form-control" placeholder="Search">
-
-                            <div class="input-group-append float-right">
-                                <button type="submit" class="btn btn-info">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>--%>
+                <div class="card-header text-center">
+                    <h1 class="card-title">자유게시판</h1>
 
                 </div>
                 <!-- /.card-header -->
@@ -55,8 +42,8 @@
                                         <td class="bnoTh"><c:out value="${dto.bno}"/></td>
                                         <td><a href="javascript:moveRead(${dto.bno})"><c:out value="${dto.title}"/></a></td>
                                         <td><c:out value="${dto.writer}"/></td>
-                                        <td><c:out value="${dto.regDate}"/></td>
-                                        <td><c:out value="${dto.viewCount}"/> </td>
+                                        <td><fmt:formatDate pattern = "yyyy-MM-dd" value = "${dto.regDate}"/></td>
+                                        <td><c:out value="${dto.viewCount}"/></td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
@@ -66,6 +53,12 @@
                     </div>
                     <!-- /.row -->
 
+                    <div class="btn float-right">
+                        <sec:authorize access="isAuthenticated()">
+                            <button type="button" class="btn btn-block btn-outline-primary toRegisterBtn">글쓰기</button>
+                        </sec:authorize>
+                    </div>
+
                 </div>
                 <!-- /.card-body -->
             </div>
@@ -73,16 +66,13 @@
         </div>
     </div>
     <!-- /.row -->
-
-</div>
-
-    <form action="/fboard/list" method="get" style="margin-top: 15px">
+<div class="col-md-6 offset-md-3" style="margin-bottom: 15px">
+    <form action="/fboard/list" method="get" style="margin-top: 15px; text-align: center">
         <input type="hidden" name="page" value="1">
         <input type="hidden" name="size" value="${pageMaker.size}">
-        <div class="col-sm-3">
             <!-- select -->
-            <div class="form-group float-left" style="margin-top: 15px">
-                <label>Search</label>
+            <div class="form-group" style="margin-top: 15px">
+                <label value="Search">검색조건</label>
                 <select name="type" class="custom-select" style="width: auto">
                     <option value="">---</option>
                     <option value="TCW" ${pageRequestDTO.type == "TCW" ? 'selected' : ''}>전체</option>
@@ -91,21 +81,25 @@
                     <option value="W" ${pageRequestDTO.type == "W" ? 'selected' : ''}>작성자</option>
                 </select>
             </div>
-        </div>
-        <div class="col-6 float-left" style="margin-top: 15px">
-            <div class="input-group input-group-sm">
-                <input type="text" class="form-control" name="keyword" value="${pageRequestDTO.keyword}" >
+            <div class="input-group">
+                <input type="search" class="form-control form-control-lg" name="keyword" value="${pageRequestDTO.keyword}" >
                 <span class="input-group-append">
-                    <button type="submit" class="btn btn-info btn-flat" >검색</button>
+                    <button type="submit" class="btn btn-lg btn-default">search></button>
                 </span>
             </div>
-        </div>
+
+
     </form>
+</div>
+
+</div>
+
+
 
 <div class="card-footer clearfix">
 
     <!-- pagination -->
-    <div class="pagination pagination-sm m-0 float-right">
+    <div class="pagination pagination justify-content-center">
 
         <c:if test="${pageMaker.prev}">
             <li class="page-item"><a class="page-link" href="javascript:movePage(${pageMaker.start - 1})"> << </a></li>
@@ -119,11 +113,11 @@
         <c:if test="${pageMaker.next}">
             <li class="page-item"><a class="page-link" href="javascript:movePage(${pageMaker.end + 1})"> >> </a></li>
         </c:if>
-        <sec:authorize access="isAuthenticated()">
-        <button type="button" class="btn btn-block btn-outline-primary toRegisterBtn">글쓰기</button>
-        </sec:authorize>
     </div>
+    <!-- /pagination -->
+
 </div>
+
 </section>
 
 <form id="actionForm" action="/fboard/list" method="get">

@@ -45,9 +45,9 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                            <li><i class="far fa-flag"></i><span class="text">&nbsp; 69, Jong-ro 44-gil, Jongno-gu, Seoul, Republic of Korea</span></li>
+                            <li><i class="fas fa-comment"></i><span class="text">&nbsp; 02 2600 0000</span></li>
+                            <li><i class="far fa-envelope"></i><span class="text">&nbsp; dodream@gamil.com</span></li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +84,6 @@
 <script src="/resources/dist/js/jquery.animateNumber.min.js"></script>
 <script src="/resources/dist/js/bootstrap-datepicker.js"></script>
 <script src="/resources/dist/js/scrollax.min.js"></script>
-<script src="/resources/dist/js/google-map.js"></script>
 <script src="/resources/dist/js/main.js"></script>
 
 <!-- jQuery -->

@@ -4,7 +4,7 @@
 <%@include file="../includes/auctionheader.jsp" %>
 
 <!-- general form elements disabled -->
-<section class="col-10" style="margin: auto; margin-top: 15px">
+<section class="col-8" style="margin: auto; margin-top: 15px">
     <div class="card card-gray">
         <div class="card-header">
             <h3 class="card-title">역경매 게시글 작성</h3>
@@ -79,7 +79,8 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label>희망 장소</label>
-                            <input type="text" class="form-control" placeholder="ex) 서울시 종로구 관철동" name="location" required>
+                            <input type="text" class="form-control" placeholder="ex) 서울시 종로구 관철동" name="location"
+                                   required>
                         </div>
                     </div>
                     <div class="col-sm-2">
@@ -97,30 +98,35 @@
                 <div class="form-group">
                     <label class="col-form-label" for="wantedPrice"><i class="fas fa-check"></i> 원하는 가격</label>
                     <div class="input-group" id="wantedPrice">
-                        <input type="text" name="price" class="form-control is-valid col-3" placeholder="1회당 가격을 입력하세요" required>
+                        <input type="text" name="price" class="form-control is-valid col-3" placeholder="1회당 가격을 입력하세요"
+                               required>
                         <div class="input-group-append">
                             <span class="input-group-text">원</span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-6">
-                        <label><i class="fas fa-check"></i>원하는 카테고리를 선택하세요</label>
-                        <input type="hidden" name="ano" value="${ano}">
-                        <select multiple class="form-control">
-                            <option>option 1</option>
+                    <div class="form-group col-11">
+                        <label><i class="fas fa-check"></i> 원하는 카테고리를 선택하세요</label><br>
 
-                        </select>
+                            <div class="col-12" style="margin: auto;">
+                                <c:forEach items="${program}" var="program">
+                                    <button type="button" class="btn btn-outline-secondary"
+                                            style="margin-bottom: 5px">
+                                        <input type="checkbox" name="module"
+                                               value="${program.module},${program.detail}"> ${program.module}
+                                        - ${program.detail}
+                                    </button>
+                                </c:forEach>
+                            </div>
+
                     </div>
-                    <div>
-                        <label>선택한 카테고리</label>
-                        <div class="form-group col-6">
-                            <textarea style="height: auto"></textarea>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="registerFormFooter">
-                    <button type="submit" id="submitBtn" class="btn btn-info float-right">작성</button>
+                    <button type="submit" id="submitBtn" class="btn btn-block btn-outline-primary float-right col-1">
+                        작성
+                    </button>
                 </div>
 
             </form>
@@ -132,6 +138,7 @@
 <!-- general form elements disabled -->
 
 <%@include file="../includes/footer.jsp" %>
+
 
 </body>
 </html>

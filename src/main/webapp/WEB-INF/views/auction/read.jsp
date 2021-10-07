@@ -12,7 +12,7 @@
 
 <!-- Content Wrapper. Contains page content -->
 <section class="content">
-    <div class="content-wrapper col-10" style="margin: auto; margin-top: 15px; min-height: unset">
+    <div class="content-wrapper col-8" style="margin: auto; margin-top: 15px; min-height: unset">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">

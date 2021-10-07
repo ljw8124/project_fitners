@@ -31,8 +31,6 @@
         from
             tbl_auction ta left join tbl_auction_category tac on ta.ano = tac.ano
         where ta.ano = #{ano}
-
-
     </select>
 
     <select id="selectMemberPhysical" resultType="org.dodream.web.fitners.security.domain.MemberPhysical">
@@ -48,11 +46,15 @@
     <insert id="insertAuction">
         insert into tbl_auction (location, mid, price, membership, title)
         values (#{location}, #{mid}, #{price}, #{membership}, #{title})
+
+        <selectKey order="AFTER" resultType="long" keyProperty="ano">
+            select last_insert_id() <!-- 마지막으로 insert한 후 order에 맞게 insert한 숫자를 select함 -->
+        </selectKey>
     </insert>
 
     <!-- 해당 경매에 category 넣을 때 -->
     <insert id="insertAuctionCategory">
-        insert into tbl_auction_category (ano, module, detail)
+        insert into tbl_auction_category(ano, module, detail)
         values (#{ano}, #{module}, #{detail})
     </insert>
 
@@ -63,6 +65,10 @@
 
     <select id="selectProgram" resultType="org.dodream.web.fitners.auction.domain.Program">
         select * from tbl_program
+    </select>
+
+    <select id="getProgramList" resultType="org.dodream.web.fitners.auction.domain.Program">
+        select * from tbl_auction_category where ano = #{ano}
     </select>
 
 

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Service
 @Log4j2
 @RequiredArgsConstructor
@@ -32,12 +33,45 @@ public class AuctionServiceImpl implements AuctionService {
     }
 
     @Override
-    public Long registerAuction(AuctionDTO auctionDTO,  MemberPhysicalDTO memberPhysicalDTO) {
+    public List<ProgramDTO> getProgram() {
+        List<ProgramDTO> programDTOList =
+                auctionMapper.selectProgram().stream().map(program -> program.getDTO()).collect(Collectors.toList());
+        return programDTOList;
+    }
 
-        //auctionMapper.insertAuctionCategory(programDTO.getDomain());
+    @Override
+    public Long registerAuction(AuctionDTO auctionDTO, MemberPhysicalDTO memberPhysicalDTO, ProgramDTO programDTO) {
+        Auction auction = auctionDTO.getDomain();
 
+        auctionMapper.insertAuction(auction);
         auctionMapper.insertMemberPhysical(memberPhysicalDTO.getDomain());
 
-        return auctionMapper.insertAuction(auctionDTO.getDomain());
+        Long ano = auction.getAno();
+        programDTO.setAno(ano);
+
+        String str = programDTO.getModule();
+        String[] result = str.split(",");
+
+        for(int i = 0; i < result.length; i++) {
+
+            programDTO.setModule(result[i++]);
+            programDTO.setDetail(result[i]);
+
+            auctionMapper.insertAuctionCategory(programDTO.getDomain());
+        }
+        return ano;
+    }
+
+    @Override
+    public List<ProgramDTO> getProgramList() {
+       List<ProgramDTO> programDTOList =
+               auctionMapper.getProgramList().stream().map(program -> program.getDTO()).collect(Collectors.toList());
+
+       return  programDTOList;
+    }
+
+    @Override
+    public void addCategory(ProgramDTO programDTO) {
+        auctionMapper.insertAuctionCategory(programDTO.getDomain());
     }
 }

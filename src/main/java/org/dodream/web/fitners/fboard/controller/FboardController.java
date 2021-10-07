@@ -5,6 +5,7 @@ import lombok.extern.log4j.Log4j2;
 import org.dodream.web.fitners.common.dto.PageMaker;
 import org.dodream.web.fitners.common.dto.PageRequestDTO;
 import org.dodream.web.fitners.common.dto.PageResponseDTO;
+import org.dodream.web.fitners.common.dto.UploadResponseDTO;
 import org.dodream.web.fitners.fboard.dto.FboardDTO;
 import org.dodream.web.fitners.fboard.service.FboardService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -55,7 +56,17 @@ public class FboardController {
         List<FboardDTO> fboardDTOList = pageResponseDTO.getDtoList();
         log.warn(fboardDTOList);
 
+       /* List<UploadResponseDTO> uploadResponseDTOList = null;
+
+        for(int i = 0; i < fboardDTOList.size(); i++) {
+            uploadResponseDTOList.add(fboardDTOList.get(i).getFiles().get(0));
+        }
+        log.warn("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");*/
+
+
         model.addAttribute("dtoList", pageResponseDTO.getDtoList());
+
+
 
         int page = pageRequestDTO.getPage();
         int size = pageRequestDTO.getSize();
