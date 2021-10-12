@@ -84,7 +84,7 @@
             <div class="input-group">
                 <input type="search" class="form-control form-control-lg" name="keyword" value="${pageRequestDTO.keyword}" >
                 <span class="input-group-append">
-                    <button type="submit" class="btn btn-lg btn-default">search></button>
+                    <button type="submit" class="btn btn-lg btn-default">search</button>
                 </span>
             </div>
 
@@ -100,7 +100,6 @@
 
     <!-- pagination -->
     <div class="pagination pagination justify-content-center">
-
         <c:if test="${pageMaker.prev}">
             <li class="page-item"><a class="page-link" href="javascript:movePage(${pageMaker.start - 1})"> << </a></li>
         </c:if>
@@ -113,6 +112,7 @@
         <c:if test="${pageMaker.next}">
             <li class="page-item"><a class="page-link" href="javascript:movePage(${pageMaker.end + 1})"> >> </a></li>
         </c:if>
+
     </div>
     <!-- /pagination -->
 
@@ -129,7 +129,6 @@
         <input type="hidden" name="keyword" value="${pageRequestDTO.keyword}">
     </c:if>
 </form>
-
 
 <%@include file="../includes/footer.jsp" %>
 

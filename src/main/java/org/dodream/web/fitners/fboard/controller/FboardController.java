@@ -56,17 +56,7 @@ public class FboardController {
         List<FboardDTO> fboardDTOList = pageResponseDTO.getDtoList();
         log.warn(fboardDTOList);
 
-       /* List<UploadResponseDTO> uploadResponseDTOList = null;
-
-        for(int i = 0; i < fboardDTOList.size(); i++) {
-            uploadResponseDTOList.add(fboardDTOList.get(i).getFiles().get(0));
-        }
-        log.warn("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");*/
-
-
         model.addAttribute("dtoList", pageResponseDTO.getDtoList());
-
-
 
         int page = pageRequestDTO.getPage();
         int size = pageRequestDTO.getSize();

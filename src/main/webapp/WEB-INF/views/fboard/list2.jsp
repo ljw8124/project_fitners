@@ -45,6 +45,7 @@
                                     <th>제목</th>
                                     <th>작성자</th>
                                     <th>작성일</th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -54,6 +55,7 @@
                                         <td><a href="javascript:moveRead(${dto.bno})"><c:out value="${dto.title}"></c:out></a></td>
                                         <td><c:out value="${dto.writer}"></c:out></td>
                                         <td><c:out value="${dto.regDate}"></c:out></td>
+
                                     </tr>
                                 </c:forEach>
                                 </tbody>

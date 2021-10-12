@@ -44,7 +44,6 @@
                             </div>
                         </div>
                     </form>
-                    <hr>
 
                     <div style="margin-left: 15px">
                         <c:forEach items="${boardDTO.files}" var="attach">
