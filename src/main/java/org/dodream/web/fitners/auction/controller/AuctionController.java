@@ -4,8 +4,12 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.dodream.web.fitners.auction.dto.AuctionDTO;
+import org.dodream.web.fitners.auction.dto.AuctionListDTO;
 import org.dodream.web.fitners.auction.dto.ProgramDTO;
 import org.dodream.web.fitners.auction.service.AuctionService;
+import org.dodream.web.fitners.common.dto.PageMaker;
+import org.dodream.web.fitners.common.dto.PageRequestDTO;
+import org.dodream.web.fitners.common.dto.PageResponseDTO;
 import org.dodream.web.fitners.security.dto.MemberPhysicalDTO;
 import org.dodream.web.fitners.security.service.CustomUserDetailsService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -59,6 +63,30 @@ public class AuctionController {
         log.warn("=======================auction post register success================");
 
         return "redirect:/auction/list";
+    }
+
+    @GetMapping("/list")
+    public void getList(PageRequestDTO pageRequestDTO, Model model) {
+
+        log.warn("==========================auction get list==================");
+        PageResponseDTO<AuctionListDTO> pageResponseDTO =auctionService.getAuctionLists(pageRequestDTO);
+        List<AuctionListDTO> auctionDTOList = pageResponseDTO.getDtoList();
+        log.warn(auctionDTOList);
+
+        model.addAttribute("dtoList", pageResponseDTO.getDtoList());
+
+        int page = pageRequestDTO.getPage();
+        int size = pageRequestDTO.getSize();
+        int total = pageResponseDTO.getCount();
+
+        PageMaker pageMaker = new PageMaker(page, size, total);
+        log.warn(pageMaker.toString());
+
+        model.addAttribute("pageMaker", pageMaker);
+
+        log.warn("=======getList success======");
+
+
     }
 
 }

@@ -4,8 +4,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.dodream.web.fitners.auction.domain.Auction;
 import org.dodream.web.fitners.auction.dto.AuctionDTO;
+import org.dodream.web.fitners.auction.dto.AuctionListDTO;
 import org.dodream.web.fitners.auction.dto.ProgramDTO;
 import org.dodream.web.fitners.auction.mapper.AuctionMapper;
+import org.dodream.web.fitners.common.dto.PageRequestDTO;
+import org.dodream.web.fitners.common.dto.PageResponseDTO;
 import org.dodream.web.fitners.security.dto.MemberPhysicalDTO;
 import org.springframework.stereotype.Service;
 
@@ -73,5 +76,23 @@ public class AuctionServiceImpl implements AuctionService {
     @Override
     public void addCategory(ProgramDTO programDTO) {
         auctionMapper.insertAuctionCategory(programDTO.getDomain());
+    }
+
+    @Override
+    public PageResponseDTO<AuctionListDTO> getAuctionLists(PageRequestDTO pageRequestDTO) {
+        pageRequestDTO.setSize(8);
+        List<AuctionListDTO> auctionListDTOs = auctionMapper.getAuctionLists(pageRequestDTO);
+        int count = auctionMapper.getAuctionListCount(pageRequestDTO);
+
+        PageResponseDTO<AuctionListDTO> pageResponseDTO = PageResponseDTO.<AuctionListDTO>builder()
+                .dtoList(auctionListDTOs)
+                .count(count)
+                .build();
+
+        log.info("---------------------------");
+        log.info(pageRequestDTO);
+        log.info("---------------------------");
+
+        return pageResponseDTO;
     }
 }

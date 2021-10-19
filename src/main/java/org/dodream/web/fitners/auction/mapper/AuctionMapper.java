@@ -2,6 +2,8 @@ package org.dodream.web.fitners.auction.mapper;
 
 import org.dodream.web.fitners.auction.domain.Auction;
 import org.dodream.web.fitners.auction.domain.Program;
+import org.dodream.web.fitners.auction.dto.AuctionListDTO;
+import org.dodream.web.fitners.common.dto.PageRequestDTO;
 import org.dodream.web.fitners.security.domain.MemberPhysical;
 import org.springframework.security.core.parameters.P;
 
@@ -28,4 +30,8 @@ public interface AuctionMapper {
     void insertAuctionCategory(Program program);
 
     List<Program> getProgramList();
+
+    int getAuctionListCount(PageRequestDTO auctionDTO);
+
+    List<AuctionListDTO> getAuctionLists(PageRequestDTO pageRequestDTO);
 }

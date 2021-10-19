@@ -72,6 +72,51 @@
     </select>
 
 
+    <select id="getAuctionListCount" resultType="int">
+        select count(ano) from tbl_auction
+    </select>
 
+    <select id="getAuctionLists" resultType="org.dodream.web.fitners.auction.domain.AuctionList">
+        select ffinal.ano, location, membership, ffinal.mid, programs, sex, age, state, IFNULL(bidcount,0) as bidcount
+        from (
+
+                 select ano, location, membership, cccc.mid, programs, sex, age, state
+
+                 from(
+
+                         select auction.ano, location, membership, mid, programs, auction.state
+
+                         from tbl_auction as auction
+
+                                  left join (
+                             select ano, group_concat(program separator '|') as programs
+                             from (
+                                      select ano, concat(module, '-', detail) as program
+                                      from tbl_auction_category
+                                  ) as cc group by ano
+                         ) programsWithAno
+                                            on auction.ano = programsWithAno.ano) cccc
+
+
+                         left outer join  (
+                     select mid, sex, age
+                     from
+                         (
+                             select auc.mid, sex, age
+                             from tbl_auction as auc
+                                      left join tbl_member_physical as phy
+                                                on auc.mid = phy.mid)ab ) abc
+                                          on cccc.mid = abc.mid
+                 group by ano ) ffinal
+                 left join (
+            SELECT ano, COUNT(ano)as bidcount  FROM tbl_bidding
+            GROUP BY ano
+            HAVING COUNT(ano) > 1
+        ) plusbidcount on ffinal.ano = plusbidcount.ano
+
+        order by ano desc
+            limit #{skip},#{size}
+
+    </select>
 
 </mapper>
