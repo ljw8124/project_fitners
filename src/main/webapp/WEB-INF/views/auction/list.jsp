@@ -278,9 +278,9 @@
                     <input type="hidden" name="menu" value="">
                 </form>
 
-                <div class="btn">
+                <div class="btn justify-content-end" style="margin: auto; text-align: right" >
                     <sec:authorize access="isAuthenticated()">
-                        <button type="button" class="col-1 btn btn-block btn-outline-primary toRegisterBtn float-right">글쓰기</button>
+                        <button type="button" class="btn btn-block btn-outline-primary toRegisterBtn">글쓰기</button>
                     </sec:authorize>
                 </div>
 

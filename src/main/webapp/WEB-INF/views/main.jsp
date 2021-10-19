@@ -121,7 +121,7 @@
                                     <h5><em>Personal Training Matching Serivce</em></h5>
                                     <h2>We are Fitners</h2>
                                     <p>더 쉽고 편하게 피트니스 트레이너를 연결해드립니다<br>
-                                    버튼 클릭 한 번으로 바로 시작하세요</p>
+                                        버튼 클릭 한 번으로 바로 시작하세요</p>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="border-first-button scroll-to-section">
