@@ -20,6 +20,12 @@ public class AuctionServiceTests {
     @Autowired
     private AuctionService auctionService;
 
+    @Test
+    public void readTest() {
+
+        log.info(auctionService.read(3L));
+    }
+
 
 
 }

@@ -254,7 +254,7 @@
                                             <a href="#" class="btn btn-sm bg-teal">
                                                 <i class="fas fa-comments"></i> 현재 입찰자수 : <c:out value="${dto.bidcount}"/>
                                             </a>
-                                            <a href="/memberRead.jsp" class="btn btn-sm btn-primary">
+                                            <a href="javascript:moveRead(${dto.ano})" class="btn btn-sm btn-primary">
                                                 <i class="fas fa-user"></i> 입찰하기
                                             </a>
                                         </div>
@@ -277,6 +277,12 @@
                 <form id="categoryForm" action="/auction/list" method="get">
                     <input type="hidden" name="menu" value="">
                 </form>
+
+                <div class="btn">
+                    <sec:authorize access="isAuthenticated()">
+                        <button type="button" class="col-1 btn btn-block btn-outline-primary toRegisterBtn float-right">글쓰기</button>
+                    </sec:authorize>
+                </div>
 
 
                 <div class="card-footer clearfix">
@@ -349,6 +355,22 @@
         categoryForm.submit();
 
     }
+
+    function moveRead(ano) {
+
+        actionForm.setAttribute("action","/auction/read")
+        actionForm.innerHTML += `<input type='hidden' name='ano' value='\${ano}'>`
+        actionForm.submit();
+    }
+
+    document.querySelector(".toRegisterBtn").addEventListener("click", (e) => {
+        e.stopPropagation()
+        e.preventDefault()
+
+        actionForm.setAttribute("action", "/auction/register")
+        actionForm.submit();
+
+    })
 </script>
 
 </body>

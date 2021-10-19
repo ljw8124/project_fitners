@@ -29,6 +29,7 @@ public class AuctionController {
 
     private final AuctionService auctionService;
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/read")
     public void getRead(AuctionDTO auctionDTO, Model model) {
 
