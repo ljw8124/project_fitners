@@ -14,7 +14,7 @@
 <section class="listSection">
     <!-- /.row -->
     <div class="row" style="margin-top: 15px">
-        <div class="col-8" style="margin: auto">
+        <div class="col-10" style="margin: auto">
             <div class="card card-gray">
                 <div class="card-header text-center">
                     <h1 class="card-title">자유게시판</h1>
@@ -22,24 +22,21 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-
                     <!-- Table row -->
-                    <div class="row">
-                        <div class="col-12 table-responsive">
-                            <table class="table table">
+                            <table class="table">
                                 <thead>
                                 <tr>
-                                    <th class="bnoTh">번호</th>
-                                    <th>제목</th>
-                                    <th>작성자</th>
-                                    <th>작성일</th>
-                                    <th>조회수</th>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">작성일</th>
+                                    <th scope="col">조회수</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <c:forEach items="${dtoList}" var="dto">
                                     <tr>
-                                        <td class="bnoTh"><c:out value="${dto.bno}"/></td>
+                                        <td scope="row"><c:out value="${dto.bno}"/></td>
                                         <td><a href="javascript:moveRead(${dto.bno})"><c:out value="${dto.title}"/></a></td>
                                         <td><c:out value="${dto.writer}"/></td>
                                         <td><fmt:formatDate pattern = "yyyy-MM-dd" value = "${dto.regDate}"/></td>
@@ -59,10 +56,7 @@
                         </sec:authorize>
                     </div>
 
-                </div>
-                <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
+
         </div>
     </div>
     <!-- /.row -->

@@ -10,9 +10,10 @@
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 
-    <title>DigiMedia - Creative SEO HTML5 Template</title>
+    <title>Fitners</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/resources/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -96,7 +97,9 @@
                         <li class="scroll-to-section"><a href="#portfolio">FreeBoard</a></li>
                         <li class="scroll-to-section"><a href="#blog">Join PT</a></li>
                         <li class="scroll-to-section"><a href="#contact">Q&A</a></li>
-                        <li class="scroll-to-section"><div class="border-first-button"><a href="#contact">Login</a></div></li>
+                        <li class="scroll-to-section">
+                            <div class="border-first-button"><a href="/login">Login</a></div>
+                        </li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -115,7 +118,8 @@
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
-                        <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                        <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s"
+                             data-wow-delay="1s">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <h5><em>Personal Training Matching Serivce</em></h5>
@@ -133,7 +137,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <img src="/resources/main/assets/images/main.png" alt="">
+                            <img src="/resources/main/assets/images/running.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -149,21 +153,25 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <img src="/resources/main/assets/images/about-dec-v3.png" alt="">
+                            <img src="/resources/main/assets/images/mainpage.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s"
+                         data-wow-delay="0.5s">
                         <div class="about-right-content">
                             <div class="section-heading">
                                 <h6>About Us</h6>
                                 <h4>Fitness, Partners <em>Fitners</em></h4>
                                 <div class="line-dec"></div>
                             </div>
-                            <p><a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">Fitners</a>는 퍼스널 트레이너들의 구인 편의성을 제공하고 회원에게 자유로운 운동 선택권과
-                                합리적인 가격에 서비스를 제공하는 <a href="https://templatemo.com/contact" target="_blank">역경매 방식 매칭 서비스</a>를 제공합니다.</p>
+                            <p><a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">Fitners</a>는 퍼스널
+                                트레이너들의 구인 편의성을 제공하고 회원에게 자유로운 운동 선택권과
+                                합리적인 가격에 서비스를 제공하는 <a href="https://templatemo.com/contact" target="_blank">역경매 방식 매칭
+                                    서비스</a>를 제공합니다.</p>
                             <div class="row">
                                 <div class="col-lg-4 col-sm-4">
-                                    <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                                    <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s"
+                                         data-wow-delay="0s">
                                         <div class="progress" data-percentage="90">
                         <span class="progress-left">
                           <span class="progress-bar"></span>
@@ -181,7 +189,8 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-4">
-                                    <div class="skill-item second-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                                    <div class="skill-item second-skill-item wow fadeIn" data-wow-duration="1s"
+                                         data-wow-delay="0s">
                                         <div class="progress" data-percentage="80">
                         <span class="progress-left">
                           <span class="progress-bar"></span>
@@ -199,7 +208,8 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-4">
-                                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s"
+                                         data-wow-delay="0s">
                                         <div class="progress" data-percentage="80">
                         <span class="progress-left">
                           <span class="progress-bar"></span>
@@ -243,32 +253,42 @@
                                 <div class="menu">
                                     <div class="first-thumb active">
                                         <div class="thumb">
-                                            <span class="icon"><img src="/resources/main/assets/images/service-icon-01.png" alt=""></span>
-                                            Apartments
+                                            <span class="icon"><img
+                                                    src="/resources/main/assets/images/service-icon-02.png"
+                                                    alt=""></span>
+                                            Matching
                                         </div>
                                     </div>
                                     <div>
                                         <div class="thumb">
-                                            <span class="icon"><img src="/resources/main/assets/images/service-icon-02.png" alt=""></span>
-                                            Food &amp; Life
+                                            <span class="icon"><img
+                                                    src="/resources/main/assets/images/service-icon-01.png"
+                                                    alt=""></span>
+                                            Compare price
                                         </div>
                                     </div>
                                     <div>
                                         <div class="thumb">
-                                            <span class="icon"><img src="/resources/main/assets/images/service-icon-03.png" alt=""></span>
-                                            Cars
+                                            <span class="icon"><img
+                                                    src="/resources/main/assets/images/service-icon-03.png"
+                                                    alt=""></span>
+                                            Management
                                         </div>
                                     </div>
                                     <div>
                                         <div class="thumb">
-                                            <span class="icon"><img src="/resources/main/assets/images/service-icon-04.png" alt=""></span>
-                                            Shopping
+                                            <span class="icon"><img
+                                                    src="/resources/main/assets/images/service-icon-04.png"
+                                                    alt=""></span>
+                                            Free Board
                                         </div>
                                     </div>
                                     <div class="last-thumb">
                                         <div class="thumb">
-                                            <span class="icon"><img src="/resources/main/assets/images/service-icon-01.png" alt=""></span>
-                                            Traveling
+                                            <span class="icon"><img
+                                                    src="/resources/main/assets/images/service-icon-01.png"
+                                                    alt=""></span>
+                                            Gallery
                                         </div>
                                     </div>
                                 </div>
@@ -281,17 +301,23 @@
                                                 <div class="row">
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="left-text">
-                                                            <h4>SEO Analysis &amp; Daily Reports</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
-                                                                dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
+                                                            <h4>Matching & Reverse auction</h4>
+                                                            <p>역경매 게시판에는 개인 회원이 원하는 가격과 장소를 정하여 작성합니다.<br>
+                                                                그 후 트레이너는 회원이 제시하는 가격에 맞춰 입찰을 하고,<br>
+                                                                회원은 입찰 목록에 있는 트레이너 중 선택을 하게됩니다. </p>
+                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> 자신이 선택한 트레이너,</span>
+                                                                <span><i class="fa fa-check"></i> 합리적인 가격,</span>
+                                                                <span><i class="fa fa-check"></i> 원하는 장소,</span>
+                                                                <span><i class="fa fa-check"></i> 원하는 시간에,</span>
+                                                            </div>
+                                                            <p>더 쉽게 트레이너를 구하고 싶으신가요?<br>
+                                                                지금 바로 회원가입 후 신청하세요!</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="right-image">
-                                                            <img src="/resources/main/assets/images/services-image.jpg" alt="">
+                                                            <img src="/resources/main/assets/images/services-image-04.jpg"
+                                                                 alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -305,16 +331,26 @@
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="left-text">
                                                             <h4>Healthy Food &amp; Life</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt ut labore et
+                                                                dolore kengan darwin doerski token.
                                                                 dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
+                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i
+                                                                        class="fa fa-check"></i> Optimized Template</span>
+                                                            </div>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt.</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="right-image">
-                                                            <img src="/resources/main/assets/images/services-image-02.jpg" alt="">
+                                                            <img src="/resources/main/assets/images/services-image-02.jpg"
+                                                                 alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -328,16 +364,26 @@
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="left-text">
                                                             <h4>Car Re-search &amp; Transport</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt ut labore et
+                                                                dolore kengan darwin doerski token.
                                                                 dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
+                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i
+                                                                        class="fa fa-check"></i> Optimized Template</span>
+                                                            </div>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt.</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="right-image">
-                                                            <img src="/resources/main/assets/images/services-image-03.jpg" alt="">
+                                                            <img src="/resources/main/assets/images/services-image-03.jpg"
+                                                                 alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -351,16 +397,26 @@
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="left-text">
                                                             <h4>Online Shopping &amp; Tracking ID</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt ut labore et
+                                                                dolore kengan darwin doerski token.
                                                                 dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
+                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i
+                                                                        class="fa fa-check"></i> Optimized Template</span>
+                                                            </div>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt.</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="right-image">
-                                                            <img src="/resources/main/assets/images/services-image-04.jpg" alt="">
+                                                            <img src="/resources/main/assets/images/services-image-04.jpg"
+                                                                 alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -374,16 +430,26 @@
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="left-text">
                                                             <h4>Enjoy &amp; Travel</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt ut labore et dolore kengan darwin doerski token.
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt ut labore et
+                                                                dolore kengan darwin doerski token.
                                                                 dover lipsum lorem and the others.</p>
-                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span> <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span>
-                                                                <span><i class="fa fa-check"></i> Data Info</span> <span><i class="fa fa-check"></i> SEO Analysis</span> <span><i class="fa fa-check"></i> Optimized Template</span></div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedr do eiusmod deis tempor incididunt.</p>
+                                                            <div class="ticks-list"><span><i class="fa fa-check"></i> Optimized Template</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i class="fa fa-check"></i> Data Info</span>
+                                                                <span><i class="fa fa-check"></i> SEO Analysis</span>
+                                                                <span><i
+                                                                        class="fa fa-check"></i> Optimized Template</span>
+                                                            </div>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sedr do eiusmod deis tempor incididunt.</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 align-self-center">
                                                         <div class="right-image">
-                                                            <img src="/resources/main/assets/images/services-image.jpg" alt="">
+                                                            <img src="/resources/main/assets/images/services-image.jpg"
+                                                                 alt="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -406,31 +472,108 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <h6>Get Your Free Quote</h6>
-                    <h4>Grow With Us Now</h4>
+                    <h6>How to Match</h6>
+                    <h4>Login</h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
             <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                <form id="search" action="#" method="GET">
+                <form id="search" action="/login" method="post">
                     <div class="row">
                         <div class="col-lg-4 col-sm-4">
                             <fieldset>
-                                <input type="web" name="web" class="website" placeholder="Your website URL..." autocomplete="on" required>
+                                <input type="text" name="username" class="website" placeholder="Enter ID"
+                                       autocomplete="on" required>
                             </fieldset>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                             <fieldset>
-                                <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
+                                <input type="password" name="password" class="email" placeholder="Enter Password"
+                                       autocomplete="on" required>
                             </fieldset>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                             <fieldset>
-                                <button type="submit" class="main-button">Get Quote Now</button>
+                                <button type="submit" class="main-button">LOGIN</button>
                             </fieldset>
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="blog" class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="section-heading">
+                    <h6>Register Match</h6>
+                    <h4>Check Our Example <em>Posts</em></h4>
+                    <div class="line-dec"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="blog-post">
+                    <div class="thumb">
+                        <a href="#"><img src="/resources/main/assets/images/listimg1.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                        <span class="category">서울시 성북구 정릉동</span>
+                        <span class="date">03 August 2021</span>
+                        <a href="#"><h4>정릉동 PT쌤 찾아요</h4></a>
+                        <p>유산소 밸런스, 다이어트 목적, 당뇨 맞춤 식단, 허리 부상 재활</p>
+                        <span class="author"><img src="/resources/main/assets/images/author-post.jpg"
+                                                  alt="">ljw8124</span>
+                        <div class="border-first-button"><a href="#">Register Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="blog-posts">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="post-item">
+                                <div class="thumb">
+                                    <a href="#"><img src="/resources/main/assets/images/listimg2.jpg" alt=""></a>
+                                </div>
+                                <div class="right-content">
+                                    <span class="category">서울시 강서구 화곡동</span>
+                                    <span class="date">24 September 2021</span>
+                                    <a href="#"><h4>다이어트가 하고 싶습니다!</h4></a>
+                                    <p>가슴 중점 운동, 등 중점 운동, 바디프로필 목적, 상하체 밸런스</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="post-item">
+                                <div class="thumb">
+                                    <a href="#"><img src="/resources/main/assets/images/listimg3.jpg" alt=""></a>
+                                </div>
+                                <div class="right-content">
+                                    <span class="category">경기도 인천시 서래포구</span>
+                                    <span class="date">24 September 2021</span>
+                                    <a href="#"><h4>친절한 PT 쌤 모집</h4></a>
+                                    <p>다이어트 목적, 유산소 밸런스, 등 중점 운동, 일자목 교정</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="post-item last-post-item">
+                                <div class="thumb">
+                                    <a href="#"><img src="/resources/main/assets/images/listimg4.jpg" alt=""></a>
+                                </div>
+                                <div class="right-content">
+                                    <span class="category">경기도 광명시 철산</span>
+                                    <span class="date">24 September 2021</span>
+                                    <a href="#"><h4>철산지구 운동 알려주실분!</h4></a>
+                                    <p>유산소 밸런스, 어깨 중점 운동</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -442,8 +585,8 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <h6>Our Portofolio</h6>
-                    <h4>See Our Recent <em>Projects</em></h4>
+                    <h6>Choose Trainer</h6>
+                    <h4>Let us introduce our<em> Trainer</em></h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
@@ -457,11 +600,11 @@
                         <a href="#">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="/resources/main/assets/images/portfolio-01.jpg" alt="">
+                                    <img src="/resources/main/assets/images/트레이너1.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
+                                    <h4>양치승</h4>
+                                    <span>다이어트 전문</span>
                                 </div>
                             </div>
                         </a>
@@ -470,11 +613,11 @@
                         <a href="#">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="/resources/main/assets/images/portfolio-01.jpg" alt="">
+                                    <img src="/resources/main/assets/images/트레이너2.png" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
+                                    <h4>곽용태</h4>
+                                    <span>재활치료사 출신</span>
                                 </div>
                             </div>
                         </a>
@@ -483,11 +626,11 @@
                         <a href="#">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="/resources/main/assets/images/portfolio-02.jpg" alt="">
+                                    <img src="/resources/main/assets/images/트레이너3.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
+                                    <h4>김용환</h4>
+                                    <span>Cross Fit 전문</span>
                                 </div>
                             </div>
                         </a>
@@ -496,11 +639,11 @@
                         <a href="#">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="/resources/main/assets/images/portfolio-03.jpg" alt="">
+                                    <img src="/resources/main/assets/images/트레이너4.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
+                                    <h4>차한슬</h4>
+                                    <span>바디프로필 전문</span>
                                 </div>
                             </div>
                         </a>
@@ -509,11 +652,11 @@
                         <a href="#">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="/resources/main/assets/images/portfolio-04.jpg" alt="">
+                                    <img src="/resources/main/assets/images/트레이너6.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Website Builder</h4>
-                                    <span>Marketing</span>
+                                    <h4>김송이</h4>
+                                    <span>필라테스 전문</span>
                                 </div>
                             </div>
                         </a>
@@ -524,151 +667,59 @@
     </div>
 </div>
 
-<div id="blog" class="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
-                <div class="section-heading">
-                    <h6>Recent News</h6>
-                    <h4>Check Our Blog <em>Posts</em></h4>
-                    <div class="line-dec"></div>
-                </div>
-            </div>
-            <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                <div class="blog-post">
-                    <div class="thumb">
-                        <a href="#"><img src="/resources/main/assets/images/blog-post-01.jpg" alt=""></a>
-                    </div>
-                    <div class="down-content">
-                        <span class="category">SEO Analysis</span>
-                        <span class="date">03 August 2021</span>
-                        <a href="#"><h4>Lorem Ipsum Dolor Sit Amet, Consectetur Adelore
-                            Eiusmod Tempor Incididunt</h4></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor incididunt ut labore.</p>
-                        <span class="author"><img src="/resources/main/assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
-                        <div class="border-first-button"><a href="#">Discover More</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                <div class="blog-posts">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="/resources/main/assets/images/blog-post-02.jpg" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="/resources/main/assets/images/blog-post-03.jpg" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="post-item last-post-item">
-                                <div class="thumb">
-                                    <a href="#"><img src="/resources/main/assets/images/blog-post-04.jpg" alt=""></a>
-                                </div>
-                                <div class="right-content">
-                                    <span class="category">SEO Analysis</span>
-                                    <span class="date">24 September 2021</span>
-                                    <a href="#"><h4>Lorem Ipsum Dolor Sit Amei Eiusmod Tempor</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, cocteturi adipiscing eliterski.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div id="contacts" class="contact-us section">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h6>Contact Us</h6>
-                    <h4>Get In Touch With Us <em>Now</em></h4>
+                    <h6>Sign Up</h6>
+                    <h4>Join <em>Now!</em></h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
             <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form id="contact" action="" method="post">
+                <form id="contact" action="/signin" method="post">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="contact-dec">
                                 <img src="/resources/main/assets/images/contact-dec-v3.png" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-5">
-                            <div id="map">
-                                <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                        <div class="col-lg-5" style="">
+                            <br><br><br>
+                            <div>
+                                <img src="/resources/main/assets/images/signup.jpg">
                             </div>
                         </div>
+
                         <div class="col-lg-7">
                             <div class="fill-form">
                                 <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="info-post">
-                                            <div class="icon">
-                                                <img src="/resources/main/assets/images/phone-icon.png" alt="">
-                                                <a href="#">010-020-0340</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="info-post">
-                                            <div class="icon">
-                                                <img src="/resources/main/assets/images/email-icon.png" alt="">
-                                                <a href="#">our@email.com</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="info-post">
-                                            <div class="icon">
-                                                <img src="/resources/main/assets/images/location-icon.png" alt="">
-                                                <a href="#">123 Rio de Janeiro</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                                        </fieldset>
-                                        <fieldset>
-                                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                                        </fieldset>
-                                        <fieldset>
-                                            <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>
-                                        </fieldset>
-                                    </div>
+
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
+                                            <input type="text" name="username" id="name" placeholder="Enter your ID"
+                                                   required>
                                         </fieldset>
+                                        <fieldset>
+                                            <input type="password" name="password" id="email"
+                                                   placeholder="Enter your Password" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="text" name="mname" id="subject" placeholder="Enter your Name">
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="text" name="memail" id="memail" placeholder="Enter your Email">
+                                        </fieldset>
+
+                                        <div class="col-lg-12">
+                                            <fieldset>
+                                                <button type="submit" id="form-submit" class="main-button ">SIGN IN
+                                                </button>
+                                            </fieldset>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -685,7 +736,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <p>Copyright © 2022 DigiMedia Co., Ltd. All Rights Reserved.
-                    <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
+                    <br>Design: <a href="https://templatemo.com" target="_parent"
+                                   title="free css templates">TemplateMo</a>
                     <br>Distributed By: <a href="https://themewagon.com" target="_blank" title="free css templates">ThemeWagon</a>
                 </p>
             </div>
