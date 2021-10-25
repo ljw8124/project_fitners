@@ -5,8 +5,8 @@
 <mapper namespace="org.dodream.web.fitners.fboard.mapper.FboardMapper">
 
     <insert id="insertFboard">
-        insert into tbl_fboard (title, content, writer)
-        values (#{title}, #{content}, #{writer})
+        insert into tbl_fboard (title, content, writer, eState)
+        values (#{title}, #{content}, #{writer}, #{eState})
         <selectKey order="AFTER" resultType="long" keyProperty="bno">
             select last_insert_id() <!-- 마지막으로 insert한 후 order에 맞게 insert한 숫자를 select함 -->
         </selectKey>

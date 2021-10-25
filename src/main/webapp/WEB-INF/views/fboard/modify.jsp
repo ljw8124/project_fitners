@@ -1,7 +1,14 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="../includes/fboardheader.jsp"%>
+<%@include file="../includes/exheader.jsp"%>
+
+<style>
+    img {
+        height: 30%;
+        width: auto;
+    }
+</style>
 
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
@@ -21,6 +28,7 @@
                                 <input type="text" name="title" class="form-control col-5" placeholder="제목을 입력하세요..."
                                        value="<c:out value="${boardDTO.title}"/> " id="fboardTitle">
                             </div>
+                            <br>
                             <div>
                                 <label for="fboardWriter">작성자</label>
                                 <input type="text" name="writer" class="form-control col-5" placeholder="작성자를 입력하세요..."
@@ -36,10 +44,11 @@
                                 <!-- 실제 attach div 자리 -->
                             </div>
                             <div class="card-footer">
-                                <button type="button" class="btn btn-info float-left" id="toListBtn">목록</button>
-                                <button type="button" class="btn btn-warning float-right" id="modifyBtn">수정</button>
-                                <button type="button" class="btn btn-danger float-right" id="removeBtn"
-                                style="margin-right: 5px">삭제</button>
+                                <button type="button" class="btn btn-outline-success left" id="toListBtn">목록</button>
+                                <div style="float: right">
+                                <button type="button" class="btn btn-outline-warning right" id="modifyBtn">수정</button>
+                                <button type="button" class="btn btn-outline-danger" id="removeBtn">삭제</button>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -51,7 +60,7 @@
                             <input type="file" name="uploadFiles" id="fileInputLabel" multiple>
                             <label for="fileInputLabel"></label>
 
-                            <button type="button" class="btn btn-info" id="uploadBtn" style="alignment: right">upload</button>
+                            <button type="button" class="btn btn-outline-primary" id="uploadBtn" style="alignment: right">upload</button>
                         </span>
 
                         <!-- 원래 attach 물고있는 code -->
@@ -84,7 +93,7 @@
     <input type="hidden" name="size" value="${pageRequestDTO.size}">
 </form>
 
-<%@include file="../includes/footer.jsp"%>
+<%@include file="../includes/exfooter.jsp"%>
 
 </body>
 

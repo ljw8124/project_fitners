@@ -94,7 +94,7 @@
                         <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                         <li class="scroll-to-section"><a href="#about">About</a></li>
                         <li class="scroll-to-section"><a href="#services">How to Match</a></li>
-                        <li class="scroll-to-section"><a href="#portfolio">FreeBoard</a></li>
+                        <li class="scroll-to-section"><a href="#portfolio">Review</a></li>
                         <li class="scroll-to-section"><a href="#blog">Join PT</a></li>
                         <li class="scroll-to-section"><a href="#contact">Q&A</a></li>
                         <li class="scroll-to-section">
@@ -603,7 +603,7 @@
                                     <img src="/resources/main/assets/images/트레이너1.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>양치승</h4>
+                                    <h4>이한규</h4>
                                     <span>다이어트 전문</span>
                                 </div>
                             </div>
@@ -699,10 +699,20 @@
                                 <div class="row">
 
                                     <div class="col-lg-12">
-                                        <fieldset>
-                                            <input type="text" name="username" id="name" placeholder="Enter your ID"
-                                                   required>
-                                        </fieldset>
+                                        <div class="row">
+
+                                            <div class="col-lg-9 col-sm-9">
+                                                <fieldset>
+                                                    <input type="text" name="username" class="website" placeholder="Enter ID"
+                                                           required>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-3">
+                                                <fieldset>
+                                                    <button type="button" class="main-button" onclick="checkValidation()">CHECK</button>
+                                                </fieldset>
+                                            </div>
+                                        </div>
                                         <fieldset>
                                             <input type="password" name="password" id="email"
                                                    placeholder="Enter your Password" required>

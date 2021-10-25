@@ -1,7 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@include file="../includes/fboardheader.jsp" %>
+<%@include file="../includes/exheader.jsp" %>
+
+<style>
+    img {
+        height: 30%;
+        width: auto;
+    }
+</style>
 
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
@@ -9,7 +16,7 @@
             <div class="col-md-8" style="margin: auto">
                 <div class="card card-gray">
                     <div class="card-header">
-                        <h3 class="card-title text-center">자유게시판</h3>
+                        <h3 class="card-title text-center">Review</h3>
                     </div>
 
                     <!-- form start -->
@@ -20,6 +27,7 @@
                                 <input type="text" name="title" class="form-control col-5" placeholder="제목을 입력하세요..."
                                        value="<c:out value="${boardDTO.title}"/> " id="fboardTitle" readonly>
                             </div>
+                            <br>
                             <div>
                                 <label for="fboardWriter">작성자</label>
                                 <input type="text" name="writer" class="form-control col-5" placeholder="작성자를 입력하세요..."
@@ -36,10 +44,10 @@
                                 <!-- 실제 attach div 자리 -->
                             </div>
                             <div class="card-footer">
-                                <button type="button" class="btn btn-info float-left toListBtn">목록</button>
+                                <button type="button" class="btn btn-outline-success toListBtn">목록</button>
                                 <sec:authentication property="principal" var="memberDTO"/>
                                 <c:if test="${boardDTO.writer eq memberDTO.mid}">
-                                    <button type="button" class="btn btn-warning float-right toModifyBtn">수정/삭제</button>
+                                    <button type="button" class="btn btn-outline-warning toModifyBtn" style="float: right">수정/삭제</button>
                                 </c:if>
                             </div>
                         </div>
@@ -66,7 +74,7 @@
                                 <input type="hidden" name="replyer"
                                        value="<sec:authentication property="principal.mid"/>">
                                 <div class="input-group-append">
-                                    <button type="button" class="btn btn-info operBtn">작성</button>
+                                    <button type="button" class="btn btn-outline-primary operBtn">작성</button>
                                 </div>
                             </div>
 
@@ -125,7 +133,7 @@
 
 </body>
 
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/exfooter.jsp" %>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="/resources/dist/js/reply.js"></script>
@@ -161,17 +169,18 @@
 
             const {rno, bno, reply, replyer, regDate, modDate} = {...replyObj}
 
-            const replyList = `<div class="direct-chat-msg fboard-reply">
-                <div class="direct-chat-infos clearfix" style="margin-left: 15px">
-                    <div class="direct-chat-name float-left">
+            const replyList = `<div class="fboard-reply">
+                <div style="margin-left: 15px">
+                    <div>
                         <span>
                             <strong>\${replyer}</strong>
                         </span>
-                    </div><br>
-                    <div data-rno='\${rno}' data-replyer='\${replyer}'
-                        class="direct-chat-text float-left col-6" style="margin-left: 0px" ">\${reply}
                     </div>
+                    <input data-rno='\${rno}' data-replyer='\${replyer}' class="form-control"
+                       style="margin-left: 0px; width: 80% " value="\${reply}" readonly>
                     <div class="direct-chat-timestamp float-right">\${regDate}</div>
+                </div>
+                <br>
                 </div>`
             return replyList
         }

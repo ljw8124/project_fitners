@@ -1,7 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
-<%@include file="../includes/fboardheader.jsp" %>
+<%@include file="../includes/exheader.jsp" %>
+<style>
+    img {
+        height: 30%;
+        width: auto;
+    }
+</style>
 
 <section class="content" style="margin-top: 10px">
     <div class="container-fluid">
@@ -9,17 +15,23 @@
             <div class="col-md-8" style="margin: auto">
                 <div class="card card-gray">
                     <div class="card-header">
-                        <h3 class="card-title">자유게시판 글 작성</h3>
+                        <h3 class="card-title">Review Register</h3>
                     </div>
 
                     <!-- form start -->
-                    <form id="fboardRegsiter" action="/fboard/register" method="post">
+                    <form id="fboardRegsiter" action="/fboard/r egister" method="post">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="fboardTitle">제목</label>
+                                <select class="form-control col-3" name="eState">
+                                    <option value="수강중">수강중</option>
+                                    <option value="수료">수료</option>
+                                </select>
                                 <input type="text" name="title" class="form-control col-5"
                                        placeholder="제목을 입력하세요..." id="fboardTitle" required>
+
                             </div>
+                            <br>
                             <div>
                                 <label for="fboardWriter">작성자</label>
                                 <input type="text" name="writer" class="form-control col-5"
@@ -35,7 +47,7 @@
                             <div class="temp">
                                 <!-- 실제 attach div 자리 -->
                             </div>
-                            <div class="btn float-right">
+                            <div style="float: right">
                                 <button type="submit" id="submitBtn" class="btn btn-block btn-outline-primary">SUBMIT</button>
                             </div>
                         </div>
@@ -47,7 +59,7 @@
                             <input type="file" name="uploadFiles" id="fileInputLabel" multiple>
                             <label for="fileInputLabel"></label>
 
-                            <button type="button" class="btn btn-info" id="uploadBtn"
+                            <button type="button" class="btn btn-outline-info" id="uploadBtn"
                                     style="alignment: right">upload</button>
                         </span>
 
@@ -70,7 +82,7 @@
 </form>
 
 
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/exfooter.jsp" %>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
