@@ -13,6 +13,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
+    <!-- -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="/resources/dist/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/dist/css/animate.css">
+
+    <link rel="stylesheet" href="/resources/dist/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/resources/dist/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/resources/dist/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/resources/dist/css/aos.css">
+
+    <link rel="stylesheet" href="/resources/dist/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/resources/dist/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/resources/dist/css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="/resources/dist/css/flaticon.css">
+    <link rel="stylesheet" href="/resources/dist/css/icomoon.css">
+    <link rel="stylesheet" href="/resources/dist/css/style.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="/resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/resources/dist/css/adminlte.min.css">
+
+
+    <!-- -->
 
     <title>Fitners</title>
 
@@ -100,7 +133,7 @@
                         <li class="scroll-to-section"><a href="#contact">Q&A</a></li>
                         <li class="scroll-to-section">
                             <sec:authorize access="isAnonymous()">
-                            <div class="border-first-button"><a href="/customLogin">Login</a></div>
+                            <div class="border-first-button"><a href="/customLogin">Logout</a></div>
                             </sec:authorize>
                             <sec:authorize access="isAuthenticated()">
                                 <div class="border-first-button"><a href="/logout">Logout</a></div>

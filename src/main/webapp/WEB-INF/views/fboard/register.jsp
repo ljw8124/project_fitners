@@ -19,7 +19,7 @@
                     </div>
 
                     <!-- form start -->
-                    <form id="fboardRegsiter" action="/fboard/r egister" method="post">
+                    <form id="fboardRegsiter" action="/fboard/register" method="post">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="fboardTitle">제목</label>

@@ -38,8 +38,8 @@
     </select>
 
     <insert id="insertMemberPhysical">
-        insert into tbl_member_physical (mid, height, weight, age, sex, diseases)
-        values (#{mid}, #{height}, #{weight}, #{age}, #{sex}, #{diseases})
+        insert into tbl_member_physical (mid, height, weight, sex, diseases)
+        values (#{mid}, #{height}, #{weight}, #{sex}, #{diseases})
     </insert>
 
     <!-- auction 작성 -->

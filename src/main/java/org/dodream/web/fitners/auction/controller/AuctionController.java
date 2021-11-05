@@ -1,6 +1,5 @@
 package org.dodream.web.fitners.auction.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.dodream.web.fitners.auction.dto.AuctionDTO;
@@ -10,8 +9,8 @@ import org.dodream.web.fitners.auction.service.AuctionService;
 import org.dodream.web.fitners.common.dto.PageMaker;
 import org.dodream.web.fitners.common.dto.PageRequestDTO;
 import org.dodream.web.fitners.common.dto.PageResponseDTO;
+
 import org.dodream.web.fitners.security.dto.MemberPhysicalDTO;
-import org.dodream.web.fitners.security.service.CustomUserDetailsService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,7 +52,7 @@ public class AuctionController {
     }
 
     @PostMapping("/register")
-    public String postRegister(AuctionDTO auctionDTO,ProgramDTO programDTO, MemberPhysicalDTO memberPhysicalDTO, Model model) {
+    public String postRegister(AuctionDTO auctionDTO, ProgramDTO programDTO, MemberPhysicalDTO memberPhysicalDTO, Model model) {
         log.warn("========================auction post register start=================" + auctionDTO, memberPhysicalDTO);
 
         Long ano = auctionService.registerAuction(auctionDTO, memberPhysicalDTO, programDTO);

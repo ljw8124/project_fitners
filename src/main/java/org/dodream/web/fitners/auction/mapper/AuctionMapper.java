@@ -5,7 +5,7 @@ import org.dodream.web.fitners.auction.domain.Program;
 import org.dodream.web.fitners.auction.dto.AuctionListDTO;
 import org.dodream.web.fitners.common.dto.PageRequestDTO;
 import org.dodream.web.fitners.security.domain.MemberPhysical;
-import org.springframework.security.core.parameters.P;
+
 
 import java.util.List;
 

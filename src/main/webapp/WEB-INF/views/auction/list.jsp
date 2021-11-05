@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@include file="../includes/auctionheader.jsp" %>
+<%@include file="../includes/exAheader.jsp" %>
 
 <style>
     .module-icon {
@@ -104,7 +104,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>경매목록</h1>
+                        <h1>Auction List</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -178,8 +178,8 @@
 
             <!-- Default box -->
             <div class="card card-solid">
-                <div class="card-body pb-0">
-                    <div class="row">
+                <div class="card-body pb-0" style="margin-top: 3px">
+                    <div class="row" >
 
                         <c:forEach items="${dtoList}" var="dto">
                             <div class="col-12 col-sm-6 col-md-3 d-flex align-items-stretch flex-column">
@@ -188,17 +188,17 @@
                                         경매번호 :
                                             <c:out value="${dto.ano}"/>
                                     </div>
-                                    <div class="card-body pt-0">
+                                    <div class="card-body pt-0" style="margin-top: 5px">
                                         <div class="row">
                                             <div class="col-7">
-                                                <h2 class="lead"><i class="fas fa-map-marked-alt"></i>
-                                                    <c:out value="${fn:split(dto.location,' ')[0]}"/></h2>
+                                                <h4 class="lead"><i class="fas fa-map-marked-alt"></i>
+                                                    <c:out value="${fn:split(dto.location,' ')[0]}"/></h4>
                                                     <p><c:out value="${fn:split(dto.location,' ')[1]}"/>
                                                     <c:out value="${fn:split(dto.location,' ')[2]}"/></p>
                                                 <p class="text-muted text-sm"><i class="fas fa-check"></i>
                                                     <c:out value="${dto.membership}"/>회권
                                                 </p>
-                                                <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <ul class="ml-4 mb-0 fa-ul text-muted" style="font-size: 12px !important;">
 
                                                     <li class="small"><span class="fa-li"><i
                                                             class="far fa-id-card"></i></span>
@@ -242,7 +242,7 @@
 <%--                                                    </li>--%>
                                                 </ul>
                                             </div>
-                                            <div class="col-5 text-center">
+                                            <div class="col-5 text-center" style="margin-top: 3px">
 
                                                 <img src="/resources/images/categoryIcons/${dto.state?'종결.png':'경매중.png'}" alt="user-avatar"
                                                      class="img-circle img-fluid">
@@ -331,7 +331,7 @@
 <%--    </c:if>--%>
 <%--</form>--%>
 
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/exAfooter.jsp" %>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 

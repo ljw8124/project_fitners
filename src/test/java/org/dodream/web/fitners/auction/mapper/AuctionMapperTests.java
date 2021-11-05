@@ -74,7 +74,6 @@ public class AuctionMapperTests {
                 .mid("stealdragon425")
                 .height(183)
                 .weight(97)
-                .age(45)
                 .sex(true)
                 .diseases("관절염, 허리디스크")
                 .build();

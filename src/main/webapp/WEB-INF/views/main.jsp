@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <head>
 
@@ -93,13 +94,20 @@
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                         <li class="scroll-to-section"><a href="#about">About</a></li>
-                        <li class="scroll-to-section"><a href="#services">How to Match</a></li>
-                        <li class="scroll-to-section"><a href="#portfolio">Review</a></li>
-                        <li class="scroll-to-section"><a href="#blog">Join PT</a></li>
-                        <li class="scroll-to-section"><a href="#contact">Q&A</a></li>
+                        <li class="scroll-to-section"><a href="/auction/list">Matching</a></li>
+                        <li class="scroll-to-section"><a href="/fboard/list">Review</a></li>
+                        <li class="scroll-to-section"><a href="/auction/register">Join PT</a></li>
+                        <sec:authorize access="isAnonymous()">
                         <li class="scroll-to-section">
-                            <div class="border-first-button"><a href="/login">Login</a></div>
+                            <div class="border-first-button"><a href="/login" style="text-decoration: none">Login</a></div>
                         </li>
+                        </sec:authorize>
+                        <sec:authorize access="isAuthenticated()">
+                        <li class="scroll-to-section">
+                            <div class="border-first-button"><a href="/login">Logout</a></div>
+                        </li>
+                        </sec:authorize>
+
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -472,13 +480,13 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <h6>How to Match</h6>
+                    <h6>matching</h6>
                     <h4>Login</h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
             <div class="col-lg-8 offset-lg-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                <form id="search" action="/login" method="post">
+                <form id="search">
                     <div class="row">
                         <div class="col-lg-4 col-sm-4">
                             <fieldset>
@@ -494,7 +502,8 @@
                         </div>
                         <div class="col-lg-4 col-sm-4">
                             <fieldset>
-                                <button type="submit" class="main-button">LOGIN</button>
+                                <button type="button" class="main-button">
+                                    <a href="/auction/list" style="text-decoration: none; color: white">LOGIN</a></button>
                             </fieldset>
                         </div>
                     </div>
@@ -504,6 +513,7 @@
     </div>
 </div>
 
+<!--
 <div id="blog" class="blog">
     <div class="container">
         <div class="row">
@@ -578,7 +588,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="portfolio" class="our-portfolio section">
     <div class="container">
@@ -666,7 +675,7 @@
         </div>
     </div>
 </div>
-
+-->
 
 <div id="contacts" class="contact-us section">
     <div class="container">
@@ -709,7 +718,8 @@
                                             </div>
                                             <div class="col-lg-3 col-sm-3">
                                                 <fieldset>
-                                                    <button type="button" class="main-button" onclick="checkValidation()">CHECK</button>
+                                                    <input onclick="changeText()" class="main-button" type="button"
+                                                           value="CHECK" id="checkBtn"></input>
                                                 </fieldset>
                                             </div>
                                         </div>
@@ -726,7 +736,8 @@
 
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <button type="submit" id="form-submit" class="main-button ">SIGN IN
+                                                <button type="button" id="form-submit" class="main-button "><a href="/main"
+                                                style="text-decoration: none !important">SIGN IN</a>
                                                 </button>
                                             </fieldset>
                                         </div>
@@ -763,6 +774,16 @@
 <script src="/resources/main/assets/js/animation.js"></script>
 <script src="/resources/main/assets/js/imagesloaded.js"></script>
 <script src="/resources/main/assets/js/custom.js"></script>
+
+<script>
+    function changeText()
+    {
+        const changeText = document.getElementById("checkBtn")
+        changeText.value="Checked!"
+        changeText.style.color="red"
+
+    }
+</script>
 
 </body>
 </html>

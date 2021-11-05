@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@include file="../includes/auctionheader.jsp" %>
+<%@include file="../includes/exAheader.jsp" %>
 
 <!-- general form elements disabled -->
 <section class="col-8" style="margin: auto; margin-top: 15px">
-    <div class="card card-gray">
+    <div class="card card">
         <div class="card-header">
-            <h3 class="card-title">역경매 게시글 작성</h3>
+            <h3 class="card-title">Auction Register</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -41,6 +41,7 @@
                             </select>
                         </div>
                     </div>
+                    <!--
                     <div class="col-sm-2">
                         <label>나이</label>
                         <div class="input-group">
@@ -50,6 +51,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
                     <div class="col-sm-2">
                         <label>키</label>
                         <div class="input-group">
@@ -124,7 +126,7 @@
 
                 </div>
                 <div class="registerFormFooter">
-                    <button type="submit" id="submitBtn" class="btn btn-block btn-outline-primary float-right col-1">
+                    <button type="submit" id="submitBtn" class="btn btn-block btn-outline-primary float-right col-sm-2">
                         작성
                     </button>
                 </div>
@@ -137,7 +139,7 @@
 <!-- /.card -->
 <!-- general form elements disabled -->
 
-<%@include file="../includes/footer.jsp" %>
+<%@include file="../includes/exAfooter.jsp" %>
 
 
 </body>
